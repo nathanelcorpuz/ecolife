@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+test.rest
 
 # debug
 npm-debug.log*
