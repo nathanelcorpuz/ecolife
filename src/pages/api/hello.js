@@ -1,5 +1,5 @@
 import connectMongo from "@/lib/server/services/connectMongo";
-import Test from "@/lib/server/models/test";
+import Test from "@/lib/server/models/Test";
 
 /**
  * @param {import('next').NextApiRequest} req
