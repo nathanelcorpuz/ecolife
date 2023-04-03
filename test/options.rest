@@ -1,0 +1,28 @@
+POST http://localhost:3000/api/admin/products/options/642a82cd8326e5f3242c11df
+Content-Type: application/json
+
+{
+    "title": "option2",
+    "values": ["value1", "value2"]
+}
+
+###
+
+GET http://localhost:3000/api/admin/products/options/642a82cd8326e5f3242c11df
+
+###
+
+PUT http://localhost:3000/api/admin/products/options
+Content-Type: application/json
+
+{
+    "optionId": "642aa901fc97d1aa5c77d939",
+    "newOption": {
+        "title": "option 3",
+        "values": ["value 10", "value 20"]
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/products/options/delete/642aa8b7fc97d1aa5c77d935/642a9e96fc97d1aa5c77d92b

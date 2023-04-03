@@ -7,8 +7,9 @@ const optionSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: "Product",
 	},
-	title: String,
-	valueStrings: [String],
+	title: { type: String, required: true },
+	values: [{ type: String, required: true }],
+	isDeleted: { type: Boolean, default: false },
 });
 
 const Option = models.Option || model("Option", optionSchema);
