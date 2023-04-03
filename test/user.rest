@@ -1,0 +1,42 @@
+POST http://localhost:3000/api/admin/user/
+Content-Type: application/json
+
+{
+    "firstName": "test", 
+    "lastName": "three", 
+    "email": "test.three@email.com", 
+    "password": "test123", 
+    "contactNumber": "+639222222222"
+}
+
+###
+
+GET http://localhost:3000/api/admin/user/test.three@email.com
+
+###
+
+PUT http://localhost:3000/api/admin/user/test1updated@email.com
+Content-Type: application/json
+
+{
+    "newProfileInfo": {
+        "firstName": "test",
+        "lastName":  "one",
+        "fullName": "test one",
+        "email": "test1@email.com",
+        "contactNumber": "+639141414141" 
+    },
+    "newShippingInfo": {
+        "name": "test one",
+        "address": "123 test address street",
+        "city": "test city",
+        "state":  "test state",
+        "postalCode":"12345",
+        "country": "test country",
+        "contactNumber": "+639141414141"
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/user/test.three@email.com
