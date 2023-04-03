@@ -1,6 +1,10 @@
+import createUser from "@/lib/server/helpers/admin/user/createUser";
+import connectMongo from "@/lib/server/services/connectMongo";
+
 export default async function handler(req, res) {
+	await connectMongo();
 	if (req.method === "POST") {
-		res.status(200).json({ body: req.body });
+		await createUser(req, res);
 		return;
 	}
 	if (req.method === "GET") {

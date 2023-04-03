@@ -4,13 +4,15 @@ import mongoose from "mongoose";
 const { Schema, model, models } = mongoose;
 
 const profileInfoSchema = new Schema({
-	name: String,
+	firstName: { type: String, default: "" },
+	lastName: { type: String, default: "" },
+	fullName: { type: String, default: "" },
 	email: {
 		type: String,
 		required: true,
 		unique: true,
 	},
-	contactNumber: String,
+	contactNumber: { type: String, default: "" },
 });
 
 const ProfileInfo =
