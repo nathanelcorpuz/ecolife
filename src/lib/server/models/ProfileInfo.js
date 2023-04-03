@@ -1,9 +1,12 @@
-// profileInfo.js
 import mongoose from "mongoose";
 
 const { Schema, model, models } = mongoose;
 
 const profileInfoSchema = new Schema({
+	userId: {
+		type: Schema.Types.ObjectId,
+		ref: "User",
+	},
 	firstName: { type: String, default: "" },
 	lastName: { type: String, default: "" },
 	fullName: { type: String, default: "" },

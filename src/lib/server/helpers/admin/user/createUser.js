@@ -1,5 +1,6 @@
 import Cart from "@/lib/server/models/Cart";
 import ProfileInfo from "@/lib/server/models/ProfileInfo";
+import ShippingInfo from "@/lib/server/models/ShippingInfo";
 import User from "@/lib/server/models/User";
 
 export default async function (req, res) {
@@ -18,16 +19,26 @@ export default async function (req, res) {
 	const newUserObj = {
 		profileInfoId: newProfileInfo._id,
 		password,
-		role: "customer",
 	};
 
 	const newUser = new User(newUserObj);
+
+	const newShippingInfo = new ShippingInfo({ userId: newUser._id });
 
 	const newCart = new Cart({ userId: newUser._id });
 
 	newUser.cartId = newCart._id;
 
-	const savePromises = [newProfileInfo.save(), newUser.save(), newCart.save()];
+	newUser.shippingInfoId = newShippingInfo._id;
+
+	newProfileInfo.userId = newUser._id;
+
+	const savePromises = [
+		newProfileInfo.save(),
+		newShippingInfo.save(),
+		newUser.save(),
+		newCart.save(),
+	];
 
 	try {
 		await Promise.all(savePromises)

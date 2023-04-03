@@ -1,4 +1,5 @@
 import createUser from "@/lib/server/helpers/admin/user/createUser";
+import getUsers from "@/lib/server/helpers/admin/user/getUsers";
 import connectMongo from "@/lib/server/services/connectMongo";
 
 export default async function handler(req, res) {
@@ -8,7 +9,7 @@ export default async function handler(req, res) {
 		return;
 	}
 	if (req.method === "GET") {
-		res.status(200).json({ query: req.query });
+		await getUsers(req, res);
 		return;
 	}
 	if (req.method === "PUT") {

@@ -4,13 +4,39 @@ import mongoose from "mongoose";
 const { Schema, model, models } = mongoose;
 
 const shippingInfoSchema = new Schema({
-	name: String,
-	address: String,
-	city: String,
-	state: String,
-	postalCode: String,
-	country: String,
-	contactNumber: String,
+	userId: {
+		type: Schema.Types.ObjectId,
+		ref: "User",
+		required: true,
+	},
+	name: {
+		type: String,
+		default: "",
+	},
+	address: {
+		type: String,
+		default: "",
+	},
+	city: {
+		type: String,
+		default: "",
+	},
+	state: {
+		type: String,
+		default: "",
+	},
+	postalCode: {
+		type: String,
+		default: "",
+	},
+	country: {
+		type: String,
+		default: "",
+	},
+	contactNumber: {
+		type: String,
+		default: "",
+	},
 });
 
 const ShippingInfo =
