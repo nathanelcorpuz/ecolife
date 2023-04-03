@@ -1,0 +1,31 @@
+POST http://localhost:3000/api/admin/products
+Content-Type: application/json
+
+{
+    "title": "Product test 2",
+	"price": 200,
+	"salePrice": 250,
+	"stock": 2250,
+	"description": "This is a sample product, which will soon improve its description."
+}
+
+###
+
+GET http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df/
+
+###
+
+PUT http://localhost:3000/api/admin/products/642a6a5e962289a480b8e4bf
+Content-Type: application/json
+
+{
+	"title": "Product test one updated"
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df
+
+###
+
+GET http://localhost:3000/api/admin/products/option

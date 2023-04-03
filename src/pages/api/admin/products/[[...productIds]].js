@@ -1,19 +1,30 @@
+import createProduct from "@/lib/server/helpers/admin/products/createProduct";
+import deleteProduct from "@/lib/server/helpers/admin/products/deleteProduct";
+import editProduct from "@/lib/server/helpers/admin/products/editProduct";
+import getProducts from "@/lib/server/helpers/admin/products/getProducts";
+import connectMongo from "@/lib/server/services/connectMongo";
+
 export default async function handler(req, res) {
-	if (req.method === "POST") {
-		res.status(200).json({ body: req.body });
-		return;
+	try {
+		await connectMongo();
+
+		if (req.method === "POST") {
+			await createProduct(req, res);
+			return;
+		}
+		if (req.method === "GET") {
+			await getProducts(req, res);
+			return;
+		}
+		if (req.method === "PUT") {
+			await editProduct(req, res);
+			return;
+		}
+		if (req.method === "DELETE") {
+			await deleteProduct(req, res);
+			return;
+		}
+	} catch (error) {
+		res.status(400).json(error.message);
 	}
-	if (req.method === "GET") {
-		res.status(200).json({ query: req.query });
-		return;
-	}
-	if (req.method === "PUT") {
-		res.status(200).json({ query: req.query, body: req.body });
-		return;
-	}
-	if (req.method === "DELETE") {
-		res.status(200).json({ query: req.query });
-		return;
-	}
-	res.status(200).json({ success: true });
 }

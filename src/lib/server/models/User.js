@@ -27,6 +27,10 @@ const userSchema = new Schema({
 		enum: ["customer", "admin"],
 		default: "customer",
 	},
+	isDeleted: {
+		type: Boolean,
+		default: false,
+	},
 	orderIds: [
 		{
 			type: Schema.Types.ObjectId,
