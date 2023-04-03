@@ -18,6 +18,7 @@ const productSchema = new Schema({
 	salePrice: Number,
 	stock: Number,
 	description: String,
+	isActive: { type: Boolean, default: true },
 	imageUrls: [String],
 	reviewIds: [
 		{
