@@ -5,10 +5,13 @@ Content-Type: application/json
     "isSubCategory": false,
     "categoryId": "",
     "data": {
-        "title": "Category 3",
-        "description": "Category 3 description",
+        "title": "Category 4",
+        "description": "Category 4 description",
         "productIds": [
-            "642bb7658eadb0e7dc74f8ed"
+            "642be58182f721bfc420466c",
+            "642be58382f721bfc420466e",
+            "642be58b82f721bfc4204670",
+            "642be58d82f721bfc4204672"
         ]
     }
 }
@@ -20,15 +23,12 @@ Content-Type: application/json
 
 {
     "isSubCategory": true,
-    "categoryId": "642bbd0418218acc1f777885",
+    "categoryId": "642be6d582f721bfc4204680",
     "data": {
-        "title": "Sub Category 2 for category 2",
-        "description": "Sub Category 2 for category 2 description",
+        "title": "Sub Category 4 for category 4",
+        "description": "Sub Category 4 for category 4 description",
         "productIds": [
-            "642bb7688eadb0e7dc74f8ef",
-            "642bb7658eadb0e7dc74f8ed",
-            "642bb7608eadb0e7dc74f8e9",
-            "642bb7638eadb0e7dc74f8eb"
+            "642be58182f721bfc420466c"
         ]
     }
 }
@@ -39,7 +39,7 @@ GET http://localhost:3000/api/admin/category/
 
 ###
 
-GET http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3
+GET http://localhost:3000/api/admin/category/642be6a982f721bfc4204674/642be6b582f721bfc4204677
 
 ###
 
@@ -82,4 +82,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3
+DELETE http://localhost:3000/api/admin/category/642be6c582f721bfc420467b/642be6d582f721bfc4204680/642be73c82f721bfc4204691
