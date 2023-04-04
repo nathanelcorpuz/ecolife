@@ -2,7 +2,7 @@ POST http://localhost:3000/api/admin/products
 Content-Type: application/json
 
 {
-    "title": "Product test 2",
+    "title": "Product test 3",
 	"price": 200,
 	"salePrice": 250,
 	"stock": 2250,
@@ -11,11 +11,15 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df/
+GET http://localhost:3000/api/admin/products/
 
 ###
 
-PUT http://localhost:3000/api/admin/products/642a6a5e962289a480b8e4bf
+GET http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df
+
+###
+
+PUT http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df
 Content-Type: application/json
 
 {
@@ -24,8 +28,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df
-
-###
-
-GET http://localhost:3000/api/admin/products/option
+DELETE http://localhost:3000/api/admin/products/delete/642a82cd8326e5f3242c11df/

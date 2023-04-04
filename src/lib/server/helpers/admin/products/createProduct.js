@@ -12,6 +12,8 @@ export default async function (req, res) {
 		await newProduct.save();
 
 		res.status(200).json(newProduct);
+
+		res.status(200).json(req.query);
 	} catch (error) {
 		console.log(error);
 		res.status(400).json(error.message);

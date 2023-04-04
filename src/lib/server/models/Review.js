@@ -15,8 +15,8 @@ const reviewSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: "User",
 	},
-	date: Date,
-	description: String,
+	date: { type: Date, default: Date.now },
+	description: { type: String, required: true },
 });
 
 const Review = models.Review || model("Review", reviewSchema);

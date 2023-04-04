@@ -6,7 +6,7 @@ export default async function (req, res) {
 		if (req.body.title) {
 			req.body.slug = slugify(req.body.title);
 		}
-		await Product.findByIdAndUpdate(req.query.productIds[0], req.body);
+		await Product.findByIdAndUpdate(req.query.productId, req.body);
 		res.status(200).json({ message: "Product updated" });
 	} catch (error) {
 		console.log(error);
