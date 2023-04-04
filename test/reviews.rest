@@ -1,0 +1,37 @@
+POST http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews
+Content-Type: application/json
+
+{
+    "rating": 4,
+    "comment": "This is a comment 3",
+    "userId": "642b77ae68173d04bcce3186",
+    "productId": "642a82cf8326e5f3242c11e1"
+}
+
+###
+
+GET http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews/
+
+###
+
+GET http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews/642b88347124516f14a9aaae
+
+###
+
+GET http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews/642b88347124516f14a9aaae/642b84927124516f14a9aa8e
+
+###
+
+PUT http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews/642b88347124516f14a9aaae
+Content-Type: application/json
+
+{
+    "rating": 5,
+    "comment": "This is a comment 3",
+    "userId": "642b77ae68173d04bcce3186",
+    "productId": "642a82cf8326e5f3242c11e1"
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews/642b88347124516f14a9aaae/642b880f7124516f14a9aaa6
