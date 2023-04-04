@@ -5,11 +5,10 @@ Content-Type: application/json
     "isSubCategory": false,
     "categoryId": "",
     "data": {
-        "title": "Category 1",
-        "description": "Category 1 description",
+        "title": "Category 3",
+        "description": "Category 3 description",
         "productIds": [
-            "642ba201265084143672deac",
-            "642ba214265084143672deae"
+            "642bb7658eadb0e7dc74f8ed"
         ]
     }
 }
@@ -21,15 +20,66 @@ Content-Type: application/json
 
 {
     "isSubCategory": true,
-    "categoryId": "642ba28a265084143672deb5",
+    "categoryId": "642bbd0418218acc1f777885",
     "data": {
-        "title": "Sub Category 1",
-        "description": "Sub Category 1 description",
+        "title": "Sub Category 2 for category 2",
+        "description": "Sub Category 2 for category 2 description",
         "productIds": [
-            "642ba201265084143672deac",
-            "642ba21a265084143672deb0"
+            "642bb7688eadb0e7dc74f8ef",
+            "642bb7658eadb0e7dc74f8ed",
+            "642bb7608eadb0e7dc74f8e9",
+            "642bb7638eadb0e7dc74f8eb"
         ]
     }
 }
 
 ###
+
+GET http://localhost:3000/api/admin/category/
+
+###
+
+GET http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3
+
+###
+
+GET http://localhost:3000/api/admin/category/642baf66265084143672dec3/642baf68265084143672dec8
+
+###
+
+PUT http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3
+Content-Type: application/json
+
+{
+    "isSubcategory": false,
+    "newData": {
+        "title": "Category 2",
+        "description": "Category 2 description",
+        "subCategoryIds": [],
+        "productIds": [
+            "642bb7608eadb0e7dc74f8e9",
+            "642bb7638eadb0e7dc74f8eb",
+            "642bb7688eadb0e7dc74f8ef"
+        ]
+    }
+}
+
+###
+
+PUT http://localhost:3000/api/admin/category/642baf68265084143672dec8
+Content-Type: application/json
+
+{
+    "isSubCategory": true,
+    "newData": {
+        "title": "Sub Category 2 updated",
+        "description": "Sub Category 2 description updated",
+        "productIds": [
+            "642ba214265084143672deae"
+        ]
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3

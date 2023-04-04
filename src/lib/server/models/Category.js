@@ -17,6 +17,7 @@ const categorySchema = new Schema({
 			ref: "Product",
 		},
 	],
+	isDeleted: { type: Boolean, default: false },
 });
 
 const Category = models.Category || model("Category", categorySchema);

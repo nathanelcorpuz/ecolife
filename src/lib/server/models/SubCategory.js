@@ -15,6 +15,7 @@ const subCategorySchema = new Schema({
 			ref: "Product",
 		},
 	],
+	isDeleted: { type: Boolean, default: false },
 });
 
 const SubCategory =
