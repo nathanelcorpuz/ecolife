@@ -1,0 +1,35 @@
+POST http://localhost:3000/api/admin/category
+Content-Type: application/json
+
+{
+    "isSubCategory": false,
+    "categoryId": "",
+    "data": {
+        "title": "Category 1",
+        "description": "Category 1 description",
+        "productIds": [
+            "642ba201265084143672deac",
+            "642ba214265084143672deae"
+        ]
+    }
+}
+
+###
+
+POST http://localhost:3000/api/admin/category
+Content-Type: application/json
+
+{
+    "isSubCategory": true,
+    "categoryId": "642ba28a265084143672deb5",
+    "data": {
+        "title": "Sub Category 1",
+        "description": "Sub Category 1 description",
+        "productIds": [
+            "642ba201265084143672deac",
+            "642ba21a265084143672deb0"
+        ]
+    }
+}
+
+###

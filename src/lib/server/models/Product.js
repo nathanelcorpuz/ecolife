@@ -9,10 +9,18 @@ const productSchema = new Schema({
 			ref: "Option",
 		},
 	],
-	categoryId: {
-		type: Schema.Types.ObjectId,
-		ref: "Category",
-	},
+	categoryIds: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "Category",
+		},
+	],
+	subCategoryIds: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "SubCategory",
+		},
+	],
 	title: {
 		type: String,
 		required: true,

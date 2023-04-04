@@ -1,6 +1,8 @@
+import createCategory from "@/lib/server/helpers/admin/category/createCategory";
+
 export default async function handler(req, res) {
 	if (req.method === "POST") {
-		res.status(200).json({ body: req.body });
+		await createCategory(req, res);
 		return;
 	}
 	if (req.method === "GET") {
