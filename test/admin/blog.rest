@@ -3,22 +3,22 @@ Content-Type: application/json
 
 {
     "heading": {
-        "title": "Heading Title",
-        "description": "Heading Description",
-        "author": "Heading Author"
+        "title": "Heading Title 2",
+        "description": "Heading Description 2",
+        "author": "Heading Author 2"
     },
     "sections": [
         {
-            "title": "Section Title",
-            "description": "Section Description"
+            "title": "Section Title 1 o 2",
+            "description": "Section Description with minimal rich text formatting.<br>Sample list: <ul><li>Item 1</li><li>Item 2</li></ul>"
         },
         {
-            "title": "Section Title",
-            "description": "Section Description"
+            "title": "Section Title 2 o 2",
+            "description": "Section Description 2"
         }
     ],
     "type": "normal",
-    "tags": ["tag1", "tag2"]
+    "tags": ["tag1", "tag4"]
 }
 
 ###

@@ -2,11 +2,11 @@ POST http://localhost:3000/api/admin/products
 Content-Type: application/json
 
 {
-    "title": "Product test 20",
+    "title": "Product test 21",
 	"price": 200,
 	"salePrice": 250,
 	"stock": 2250,
-	"description": "This is a sample product, which will soon improve its description."
+	"description": "A product description with rich text formatting. <br>Sample list: <ul><li>Item 1</li><li>Item 2</li></ul>"
 }
 
 ###
@@ -15,7 +15,7 @@ GET http://localhost:3000/api/admin/products/
 
 ###
 
-GET http://localhost:3000/api/admin/products/642cbbec19721b73bb77eb7f
+GET http://localhost:3000/api/admin/products/642d365cb90e8d029eaf6557
 
 ###
 
