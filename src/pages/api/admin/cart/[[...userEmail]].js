@@ -1,5 +1,6 @@
 import addProducts from "@/lib/server/helpers/admin/cart/addProducts";
 import getCart from "@/lib/server/helpers/admin/cart/getCart";
+import updateQuantity from "@/lib/server/helpers/admin/cart/updateQuantity";
 import connectMongo from "@/lib/server/services/connectMongo";
 
 export default async function handler(req, res) {
@@ -14,7 +15,7 @@ export default async function handler(req, res) {
 			return;
 		}
 		if (req.method === "PUT") {
-			res.status(200).json({ query: req.query, body: req.body });
+			await updateQuantity(req, res);
 			return;
 		}
 		if (req.method === "DELETE") {

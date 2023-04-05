@@ -3,7 +3,7 @@ Content-Type: application/json
 
 {
     "productId": "642cbbec19721b73bb77eb7f",
-    "quantity": 1
+    "quantity": 4
 }
 
 ###
@@ -12,14 +12,12 @@ GET http://localhost:3000/api/admin/cart/Russel.Klocko75@yahoo.com
 
 ###
 
-PUT http://localhost:3000/api/admin/cart/test.2@email.com
+PUT http://localhost:3000/api/admin/cart/Russel.Klocko75@yahoo.com
 Content-Type: application/json
 
 {
-    "products": {
-        "productId": "1",
-        "quantity": 2
-    }
+    "productId": "642cbbec19721b73bb77eb7f",
+    "quantity": 0
 }
 
 ###
