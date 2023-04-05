@@ -1,0 +1,57 @@
+POST http://localhost:3000/api/admin/blog/
+Content-Type: application/json
+
+{
+    "heading": {
+        "title": "Heading Title",
+        "description": "Heading Description",
+        "author": "Heading Author"
+    },
+    "sections": [
+        {
+            "title": "Section Title",
+            "description": "Section Description"
+        },
+        {
+            "title": "Section Title",
+            "description": "Section Description"
+        }
+    ],
+    "type": "normal",
+    "tags": ["tag1", "tag2"]
+}
+
+###
+
+GET http://localhost:3000/api/admin/blog/
+
+###
+
+PUT http://localhost:3000/api/admin/blog/642cf0857d35085b95e6f6b8
+Content-Type: application/json
+
+{
+    "heading": {
+        "title": "Heading Title - Updated",
+        "description": "Heading Description",
+        "author": "Heading Author"
+    },
+    "sections": [
+        {
+            "title": "Section Title",
+            "description": "Section Description"
+        },
+        {
+            "title": "Section Title",
+            "description": "Section Description"
+        }
+    ],
+    "type": "normal",
+    "tags": ["tag1", "tag2"]
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/blog/642cf0857d35085b95e6f6b8
+
+###
