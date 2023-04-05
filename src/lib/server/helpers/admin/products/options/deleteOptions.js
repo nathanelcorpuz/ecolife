@@ -36,6 +36,8 @@ export default async function (req, res) {
 
 		await Option.updateMany({ _id: { $in: optionIds } }, { isDeleted: true });
 
+		await product.updateOne({ $pull: { options: { $in: optionIds } } });
+
 		res.status(200).json("delete success");
 	} catch (error) {
 		console.log(error);

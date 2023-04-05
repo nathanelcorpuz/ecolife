@@ -9,6 +9,7 @@ export default async function (req, res) {
 				await User.findByIdAndUpdate(profileInfo.userId, { isDeleted: true });
 			})
 		);
+
 		res.status(200).json({ message: "User deleted successfully." });
 	} catch (error) {
 		console.log(error);

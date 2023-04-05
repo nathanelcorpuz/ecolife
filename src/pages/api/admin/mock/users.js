@@ -36,11 +36,7 @@ export default async function handler(req, res) {
 		await connectMongo();
 		if (req.method === "POST") {
 			let { count } = req.body;
-			let looper = [];
-			for (let i = 0; i < count; i++) {
-				looper.push(i);
-			}
-			await Promise.all(looper.map(() => createUser()));
+			await Promise.all(Array.from({ length: count }, () => createUser()));
 			res.status(200).json({ message: "Users created" });
 			return;
 		}

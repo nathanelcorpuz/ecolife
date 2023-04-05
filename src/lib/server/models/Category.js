@@ -5,7 +5,7 @@ const { Schema, model, models } = mongoose;
 const categorySchema = new Schema({
 	title: { type: String, required: true },
 	description: { type: String, default: "" },
-	subcategoryIds: [
+	subCategoryIds: [
 		{
 			type: Schema.Types.ObjectId,
 			ref: "SubCategory",
