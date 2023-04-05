@@ -1,17 +1,9 @@
-POST http://localhost:3000/api/admin/cart/test.2@email.com
+POST http://localhost:3000/api/admin/cart/Russel.Klocko75@yahoo.com
 Content-Type: application/json
 
 {
-  "products": [
-    {
-        "productId": "642cabeb00913122d742b2c4",
-        "quantity": 1
-    },
-    {
-        "productId": "642cabef00913122d742b2c6",
-        "quantity": 2
-    }
-  ]
+    "productId": "642cbbec19721b73bb77eb7f",
+    "quantity": 1
 }
 
 ###
