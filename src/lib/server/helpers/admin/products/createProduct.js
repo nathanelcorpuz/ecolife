@@ -1,11 +1,16 @@
 import Product from "@/lib/server/models/Product";
+import { sanitize } from "isomorphic-dompurify";
 import slugify from "slugify";
 
 export default async function (req, res) {
 	try {
 		const slug = slugify(req.body.title);
 
-		const newProductObj = { ...req.body, slug };
+		const newProductObj = {
+			...req.body,
+			slug,
+			description: sanitize(req.body.description),
+		};
 
 		const newProduct = new Product(newProductObj);
 
