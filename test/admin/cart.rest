@@ -2,8 +2,8 @@ POST http://localhost:3000/api/admin/cart/Russel.Klocko75@yahoo.com
 Content-Type: application/json
 
 {
-    "productId": "642cbbec19721b73bb77eb7f",
-    "quantity": 4
+    "productId": "642cbbec19721b73bb77eb81",
+    "quantity": 6
 }
 
 ###
@@ -22,4 +22,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3000/api/admin/cart/test.2@email.com
+DELETE http://localhost:3000/api/admin/cart/delete?email=Russel.Klocko75@yahoo.com&productIds=642cbbec19721b73bb77eb7f,642cbbec19721b73bb77eb81
