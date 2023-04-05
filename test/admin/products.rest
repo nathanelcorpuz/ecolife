@@ -2,7 +2,7 @@ POST http://localhost:3000/api/admin/products
 Content-Type: application/json
 
 {
-    "title": "Product test 10",
+    "title": "Product test 20",
 	"price": 200,
 	"salePrice": 250,
 	"stock": 2250,

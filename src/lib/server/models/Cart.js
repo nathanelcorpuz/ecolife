@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema, model, models } = mongoose;
 
-const cartItemSchema = new Schema({
+const productsSchema = new Schema({
 	productId: {
 		type: Schema.Types.ObjectId,
 		ref: "Product",
@@ -15,7 +15,7 @@ const cartSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: "User",
 	},
-	cartItems: [cartItemSchema],
+	products: [productsSchema],
 });
 
 const Cart = models.Cart || model("Cart", cartSchema);

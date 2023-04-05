@@ -1,0 +1,17 @@
+// create random users
+POST http://localhost:3000/api/admin/mock/users
+Content-Type: application/json
+
+{
+  "count": 10
+}
+
+###
+
+// create random products
+POST http://localhost:3000/api/admin/mock/products
+Content-Type: application/json
+
+{
+  "count": 10
+}

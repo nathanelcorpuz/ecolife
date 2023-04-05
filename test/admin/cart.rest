@@ -1,0 +1,35 @@
+POST http://localhost:3000/api/admin/cart/test.2@email.com
+Content-Type: application/json
+
+{
+  "products": [
+    {
+        "productId": "642cabeb00913122d742b2c4",
+        "quantity": 1
+    },
+    {
+        "productId": "642cabef00913122d742b2c6",
+        "quantity": 2
+    }
+  ]
+}
+
+###
+
+GET http://localhost:3000/api/admin/cart/test.2@email.com
+
+###
+
+PUT http://localhost:3000/api/admin/cart/test.2@email.com
+Content-Type: application/json
+
+{
+    "products": {
+        "productId": "1",
+        "quantity": 2
+    }
+}
+
+###
+
+DELETE http://localhost:3000/api/admin/cart/test.2@email.com
