@@ -1,4 +1,5 @@
 import addProducts from "@/lib/server/helpers/admin/cart/addProducts";
+import getCart from "@/lib/server/helpers/admin/cart/getCart";
 import connectMongo from "@/lib/server/services/connectMongo";
 
 export default async function handler(req, res) {
@@ -9,7 +10,7 @@ export default async function handler(req, res) {
 			return;
 		}
 		if (req.method === "GET") {
-			res.status(200).json({ query: req.query });
+			await getCart(req, res);
 			return;
 		}
 		if (req.method === "PUT") {
