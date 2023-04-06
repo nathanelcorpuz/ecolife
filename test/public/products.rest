@@ -1,1 +1,5 @@
 GET http://localhost:3000/api/public/products/filter/642e5e2375e308139831add2?page=2
+
+###
+
+GET http://localhost:3000/api/public/products/search?searchKey=soft
