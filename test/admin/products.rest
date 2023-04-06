@@ -15,7 +15,7 @@ GET http://localhost:3000/api/admin/products/
 
 ###
 
-GET http://localhost:3000/api/admin/products/642d365cb90e8d029eaf6557
+GET http://localhost:3000/api/admin/products/642cbbec19721b73bb77eb7e
 
 ###
 

@@ -3,7 +3,19 @@ Content-Type: application/json
 
 {
     "productId": "642cbbec19721b73bb77eb81",
-    "quantity": 6
+    "quantity": 6,
+    "options": [       
+        {
+            "optionId": "603b7bb82b6d442e6e0c1e57",
+            "title": "Color",
+            "value": "Red"
+        },
+        {
+            "optionId": "603b7bb82b6d442e6e0c1e58",
+            "title": "Size",
+            "value": "XL"
+        }
+    ]
 }
 
 ###
@@ -17,7 +29,19 @@ Content-Type: application/json
 
 {
     "productId": "642cbbec19721b73bb77eb7f",
-    "quantity": 0
+    "quantity": 0,
+    "options": [
+        {
+            "optionId": "603b7bb82b6d442e6e0c1e57",
+            "title": "Color",
+            "value": "Red"
+        },
+        {
+            "optionId": "603b7bb82b6d442e6e0c1e58",
+            "title": "Size",
+            "value": "XL"
+        }
+    ]
 }
 
 ###
