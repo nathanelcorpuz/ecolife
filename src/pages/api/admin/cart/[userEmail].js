@@ -1,6 +1,6 @@
 import addCartProducts from "@/lib/server/helpers/admin/cart/addCartProducts";
 import getCart from "@/lib/server/helpers/admin/cart/getCart";
-import updateQuantity from "@/lib/server/helpers/admin/cart/updateQuantity";
+import updateCartProduct from "@/lib/server/helpers/admin/cart/updateCartProduct";
 import connectMongo from "@/lib/server/services/connectMongo";
 
 export default async function handler(req, res) {
@@ -15,7 +15,7 @@ export default async function handler(req, res) {
 			return;
 		}
 		if (req.method === "PUT") {
-			await updateQuantity(req, res);
+			await updateCartProduct(req, res);
 			return;
 		}
 	} catch (error) {

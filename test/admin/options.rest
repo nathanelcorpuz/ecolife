@@ -1,4 +1,4 @@
-POST http://localhost:3000/api/admin/products/642cbbec19721b73bb77eb7f/options/
+POST http://localhost:3000/api/admin/products/642e546175e308139831ad1a/options/
 Content-Type: application/json
 
 {

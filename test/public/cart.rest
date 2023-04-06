@@ -1,0 +1,31 @@
+###
+
+GET http://localhost:3000/api/public/cart/642e8952512ac43878e4c91c
+
+###
+
+PUT http://localhost:3000/api/public/cart/quantity
+Content-Type: application/json
+
+{
+    "cartId": "642e8952512ac43878e4c91c",
+    "productId": "642e546175e308139831ad1a",
+    "quantity": 0
+}
+
+###
+
+PUT http://localhost:3000/api/public/cart/option
+Content-Type: application/json
+
+{
+    "cartId": "642e8952512ac43878e4c91c",
+    "productId": "642e546175e308139831ad1a",
+    "optionId": "642e905a512ac43878e4c945",
+    "value": "value 2"
+}
+
+###
+
+DELETE http://localhost:3000/api/public/cart/642e8952512ac43878e4c91c
+?productIds=642e546175e308139831ad0d,642e546175e308139831ad1e

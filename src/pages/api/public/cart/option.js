@@ -10,30 +10,25 @@ export default async function handler(req, res) {
 	try {
 		await connectMongo();
 
-		const { cartId, productId, quantity } = req.body;
+		const { cartId, productId, optionId, value } = req.body;
 
 		const cart = await Cart.findById(cartId);
 
-		if (quantity === 0) {
-			cart.products = cart.products.filter(
-				(product) => product.productId.toString() !== productId
-			);
-			await cart.save();
-			res.status(200).json({ message: "Cart updated", cart });
-			return;
-		}
+		const product = cart.products.find(
+			(product) => product.productId.toString() === productId
+		);
 
-		cart.products = cart.products.map((product) => {
-			if (product.productId.toString() === productId) {
-				product.quantity = quantity;
-			}
-			return product;
-		});
+		const option = product.options.find(
+			(option) => option.optionId.toString() === optionId
+		);
+
+		option.value = value;
 
 		await cart.save();
 
 		res.status(200).json({ message: "Cart updated", cart });
 	} catch (error) {
+		console.log(error);
 		res.status(500).json({ message: "Internal server error" });
 		return;
 	}
