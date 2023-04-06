@@ -19,6 +19,10 @@ GET http://localhost:3000/api/admin/products/642cbbec19721b73bb77eb7e
 
 ###
 
+GET http://localhost:3000/api/admin/products/search?keywords=wooden%20chair
+
+###
+
 PUT http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df
 Content-Type: application/json
 
