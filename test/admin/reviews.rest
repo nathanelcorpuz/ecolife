@@ -1,11 +1,11 @@
-POST http://localhost:3000/api/admin/products/642a82cf8326e5f3242c11e1/reviews
+POST http://localhost:3000/api/admin/products/642e546175e308139831ad1a/reviews
 Content-Type: application/json
 
 {
     "rating": 4,
     "comment": "This is a comment 3",
-    "userId": "642b77ae68173d04bcce3186",
-    "productId": "642a82cf8326e5f3242c11e1"
+    "userId": "642e8952512ac43878e4c91a",
+    "productId": "642e546175e308139831ad1a"
 }
 
 ###

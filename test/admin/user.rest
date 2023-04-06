@@ -3,8 +3,8 @@ Content-Type: application/json
 
 {
     "firstName": "test",
-    "lastName": "5", 
-    "email": "test.5@email.com", 
+    "lastName": "1", 
+    "email": "test.1@email.com", 
     "password": "test123", 
     "contactNumber": "1231231234"
 }
@@ -16,7 +16,7 @@ GET http://localhost:3000/api/admin/user/Russel.Klocko75@yahoo.com
 ###
 
 GET http://localhost:3000/api/admin/user/search
-?contactNumber=23123
+?name=test
 
 ###
 

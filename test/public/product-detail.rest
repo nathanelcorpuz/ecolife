@@ -1,0 +1,3 @@
+###
+
+GET http://localhost:3000/api/public/product-detail/TESTBespoke-Fresh-Chips
