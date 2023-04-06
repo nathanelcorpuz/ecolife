@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 		const products = await Product.find(query)
 			.skip((page - 1) * PAGE_SIZE)
 			.limit(PAGE_SIZE);
-		res.json({ totalPages, products });
+		res.status(200).json({ totalPages, products });
 	} catch (error) {
 		console.error(error);
 		return res.status(500).json({ success: false });
