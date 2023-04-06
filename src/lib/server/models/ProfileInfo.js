@@ -16,6 +16,7 @@ const profileInfoSchema = new Schema({
 		unique: true,
 	},
 	contactNumber: { type: String, default: "" },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const ProfileInfo =

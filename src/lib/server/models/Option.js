@@ -10,6 +10,7 @@ const optionSchema = new Schema({
 	title: { type: String, required: true },
 	values: [{ type: String, required: true }],
 	isDeleted: { type: Boolean, default: false },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Option = models.Option || model("Option", optionSchema);

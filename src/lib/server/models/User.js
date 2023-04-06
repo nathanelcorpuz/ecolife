@@ -43,6 +43,7 @@ const userSchema = new Schema({
 			ref: "Review",
 		},
 	],
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const User = models.User || model("User", userSchema);

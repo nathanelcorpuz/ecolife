@@ -83,6 +83,7 @@ const orderSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: "Review",
 	},
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Order = models.Order || model("Order", orderSchema);

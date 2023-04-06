@@ -26,6 +26,7 @@ const productsSchema = new Schema({
 	},
 	quantity: { type: Number, default: 1 },
 	options: [optionsSchema],
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const cartSchema = new Schema({
@@ -34,6 +35,7 @@ const cartSchema = new Schema({
 		ref: "User",
 	},
 	products: [productsSchema],
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Cart = models.Cart || model("Cart", cartSchema);

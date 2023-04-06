@@ -54,6 +54,7 @@ const productSchema = new Schema({
 			ref: "Review",
 		},
 	],
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Product = models.Product || model("Product", productSchema);

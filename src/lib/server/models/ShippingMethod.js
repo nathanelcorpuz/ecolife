@@ -8,6 +8,7 @@ const shippingMethodSchema = new Schema({
 	etaDays: Number,
 	description: String,
 	isActive: Boolean,
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const ShippingMethod =

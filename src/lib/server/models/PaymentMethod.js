@@ -5,6 +5,7 @@ const { Schema, model, models } = mongoose;
 const paymentMethodSchema = new Schema({
 	title: String,
 	isActive: Boolean,
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const PaymentMethod =

@@ -16,6 +16,7 @@ const subCategorySchema = new Schema({
 		},
 	],
 	isDeleted: { type: Boolean, default: false },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const SubCategory =

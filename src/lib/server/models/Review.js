@@ -14,6 +14,7 @@ const reviewSchema = new Schema({
 	date: { type: Date, default: Date.now },
 	comment: { type: String, required: true },
 	isDeleted: { type: Boolean, default: false },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Review = models.Review || model("Review", reviewSchema);

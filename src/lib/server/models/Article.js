@@ -26,6 +26,7 @@ const articleSchema = new Schema({
 	isDraft: { type: Boolean, default: true },
 	isDeleted: { type: Boolean, default: false },
 	datePublished: { type: Date, default: null },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Article = models.Article || model("Article", articleSchema);

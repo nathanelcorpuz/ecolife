@@ -18,6 +18,7 @@ const categorySchema = new Schema({
 		},
 	],
 	isDeleted: { type: Boolean, default: false },
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const Category = models.Category || model("Category", categorySchema);

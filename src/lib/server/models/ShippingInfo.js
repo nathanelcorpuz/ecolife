@@ -37,6 +37,7 @@ const shippingInfoSchema = new Schema({
 		type: String,
 		default: "",
 	},
+	dateCreated: { type: Date, default: Date.now },
 });
 
 const ShippingInfo =
