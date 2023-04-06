@@ -5,18 +5,8 @@ const { Schema, model, models } = mongoose;
 const categorySchema = new Schema({
 	title: { type: String, required: true },
 	description: { type: String, default: "" },
-	subCategoryIds: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "SubCategory",
-		},
-	],
-	productIds: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Product",
-		},
-	],
+	subCategoryIds: [{ type: Schema.Types.ObjectId, ref: "SubCategory" }],
+	productIds: [{ type: Schema.Types.ObjectId, ref: "Product" }],
 	isDeleted: { type: Boolean, default: false },
 	dateCreated: { type: Date, default: Date.now },
 });

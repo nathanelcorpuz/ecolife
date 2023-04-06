@@ -27,7 +27,7 @@ Content-Type: application/json
     "isSubCategory": true,
     "categoryId": "642d22a17d35085b95e6f6c9",
     "data": {
-        "title": "Sub Category 3 for category 1",
+        "title": "Sub Category 1 for category 1",
         "description": "Sub Category 3 for category 1 description",
         "productIds": [
             "642cbbec19721b73bb77eb81",

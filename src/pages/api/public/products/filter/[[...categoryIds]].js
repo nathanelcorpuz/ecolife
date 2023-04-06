@@ -1,4 +1,3 @@
-import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
 export default async function handler(req, res) {
@@ -7,8 +6,8 @@ export default async function handler(req, res) {
 	}
 	try {
 		await connectMongo();
-		const featuredProducts = await Product.find({ type: "featured" }).limit(3);
-		return res.status(200).json({ success: true, featuredProducts });
+		const { categoryIds } = req.query;
+		res.json(categoryIds);
 	} catch (error) {
 		return res.status(500).json({ success: false });
 	}
