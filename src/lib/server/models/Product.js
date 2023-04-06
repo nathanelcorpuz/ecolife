@@ -3,13 +3,11 @@ import mongoose from "mongoose";
 const { Schema, model, models } = mongoose;
 
 const productSchema = new Schema({
-	type: [
-		{
-			type: String,
-			enum: ["normal", "featured", "bestseller"],
-			default: "normal",
-		},
-	],
+	type: {
+		type: String,
+		enum: ["normal", "featured", "bestseller"],
+		default: "normal",
+	},
 	optionIds: [{ type: Schema.Types.ObjectId, ref: "Option" }],
 	categoryIds: [{ type: Schema.Types.ObjectId, ref: "Category" }],
 	subCategoryIds: [{ type: Schema.Types.ObjectId, ref: "SubCategory" }],
