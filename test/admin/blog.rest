@@ -27,7 +27,7 @@ GET http://localhost:3000/api/admin/blog/
 
 ###
 
-PUT http://localhost:3000/api/admin/blog/642cf0857d35085b95e6f6b8
+PUT http://localhost:3000/api/admin/blog/642d36f0b90e8d029eaf655a
 Content-Type: application/json
 
 {
@@ -46,7 +46,7 @@ Content-Type: application/json
             "description": "Section Description"
         }
     ],
-    "type": "normal",
+    "type": "popular",
     "tags": ["tag1", "tag2"]
 }
 

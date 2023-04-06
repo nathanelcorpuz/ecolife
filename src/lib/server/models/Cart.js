@@ -18,7 +18,7 @@ const optionsSchema = new Schema({
 	},
 });
 
-const productsSchema = new Schema({
+const productSchema = new Schema({
 	productId: {
 		type: Schema.Types.ObjectId,
 		ref: "Product",
@@ -34,7 +34,7 @@ const cartSchema = new Schema({
 		type: Schema.Types.ObjectId,
 		ref: "User",
 	},
-	products: [productsSchema],
+	products: [productSchema],
 	dateCreated: { type: Date, default: Date.now },
 });
 

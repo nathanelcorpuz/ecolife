@@ -1,0 +1,21 @@
+GET http://localhost:3000/api/public/common/top-popular-articles
+
+###
+
+POST http://localhost:3000/api/public/common/add-to-cart
+Content-Type: application/json
+
+{
+    "userId": "642cb92e19721b73bb77eb23",
+    "product": {
+        "productId": "642cbbec19721b73bb77eb7f",
+        "quantity": 5,
+        "options": [
+            {
+                "optionId": "642e3340af1cba92f5d0d553",
+                "title": "option1",
+                "value": "value 1"
+            }
+        ]
+    }
+}

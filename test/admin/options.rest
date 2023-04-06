@@ -1,9 +1,9 @@
-POST http://localhost:3000/api/admin/products/642a82cd8326e5f3242c11df/options/
+POST http://localhost:3000/api/admin/products/642cbbec19721b73bb77eb7f/options/
 Content-Type: application/json
 
 {
-    "title": "option5",
-    "values": ["value55", "value66"]
+    "title": "option 2",
+    "values": ["value 1", "value 2"]
 }
 
 ###
