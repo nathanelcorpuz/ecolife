@@ -4,7 +4,7 @@ import slugify from "slugify";
 
 export default async function (req, res) {
 	try {
-		const slug = slugify(req.body.title);
+		const slug = slugify(req.body.title, { lower: true, strict: true });
 
 		const newProductObj = {
 			...req.body,
