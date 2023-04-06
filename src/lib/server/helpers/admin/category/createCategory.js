@@ -1,15 +1,18 @@
 import Category from "@/lib/server/models/Category";
 import Product from "@/lib/server/models/Product";
 import SubCategory from "@/lib/server/models/SubCategory";
+import slugify from "slugify";
 
 export default async function (req, res) {
 	try {
 		const { isSubCategory, categoryId, data } = req.body;
 
+		const slug = slugify(data.title, { lower: true, strict: true });
+
 		if (isSubCategory) {
 			const category = await Category.findById(categoryId);
 
-			const newSubCategory = new SubCategory({ ...data, categoryId });
+			const newSubCategory = new SubCategory({ ...data, categoryId, slug });
 
 			await newSubCategory.save();
 
@@ -29,7 +32,7 @@ export default async function (req, res) {
 			return;
 		}
 
-		const newCategory = new Category(data);
+		const newCategory = new Category({ ...data, slug });
 
 		newCategory.productIds = data.productIds;
 
