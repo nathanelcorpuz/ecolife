@@ -3,9 +3,9 @@ Content-Type: application/json
 
 {
     "heading": {
-        "title": "Heading Title 2",
-        "description": "Heading Description 2",
-        "author": "Heading Author 2"
+        "title": "Heading Title 3 - popular",
+        "description": "Heading Description",
+        "author": "Heading Author"
     },
     "sections": [
         {
@@ -17,7 +17,7 @@ Content-Type: application/json
             "description": "Section Description 2"
         }
     ],
-    "type": "normal",
+    "type": "popular",
     "tags": ["tag1", "tag4"]
 }
 
