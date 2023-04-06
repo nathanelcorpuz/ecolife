@@ -5,15 +5,21 @@ Content-Type: application/json
     "isSubCategory": false,
     "categoryId": "",
     "data": {
-        "title": "Category 1",
-        "description": "Category 1 description",
+        "title": "Category 3",
+        "description": "Category 3 description",
         "productIds": [
-            "642cbbec19721b73bb77eb7e",
-            "642cbbec19721b73bb77eb7f",
-            "642cbbec19721b73bb77eb86",
-            "642cbbec19721b73bb77eb81",
-            "642cbbec19721b73bb77eb82",
-            "642cbbec19721b73bb77eb83"
+            "642e546175e308139831ad0e",
+            "642e546175e308139831ad0f",
+            "642e546175e308139831ad10",
+            "642e546175e308139831ad0c",
+            "642e546175e308139831ad13",
+            "642e546175e308139831ad14",
+            "642e546175e308139831ad15",
+            "642e546175e308139831ad16",
+            "642e546175e308139831ad17",
+            "642e546175e308139831ad18",
+            "642e546175e308139831ad19",
+            "642e546175e308139831ad12"
         ]
     }
 }
@@ -25,14 +31,17 @@ Content-Type: application/json
 
 {
     "isSubCategory": true,
-    "categoryId": "642d22a17d35085b95e6f6c9",
+    "categoryId": "642e573475e308139831ad86",
     "data": {
-        "title": "Sub Category 1 for category 1",
-        "description": "Sub Category 3 for category 1 description",
+        "title": "Sub Category 2 for category 3",
+        "description": "Sub Category 2 for category 3 description",
         "productIds": [
-            "642cbbec19721b73bb77eb81",
-            "642cbbec19721b73bb77eb82",
-            "642cbbec19721b73bb77eb83"
+            "642e546175e308139831ad15",
+            "642e546175e308139831ad16",
+            "642e546175e308139831ad17",
+            "642e546175e308139831ad18",
+            "642e546175e308139831ad19",
+            "642e546175e308139831ad12"
         ]
     }
 }
@@ -43,7 +52,7 @@ GET http://localhost:3000/api/admin/category/
 
 ###
 
-GET http://localhost:3000/api/admin/category/642be6a982f721bfc4204674/642be6b582f721bfc4204677
+GET http://localhost:3000/api/admin/category/642e573475e308139831ad86
 
 ###
 
@@ -51,19 +60,29 @@ GET http://localhost:3000/api/admin/category/642baf66265084143672dec3/642baf6826
 
 ###
 
-PUT http://localhost:3000/api/admin/category/642bb79e8eadb0e7dc74f8f3
+PUT http://localhost:3000/api/admin/category/642e55fc75e308139831ad54
 Content-Type: application/json
 
 {
     "isSubcategory": false,
     "newData": {
-        "title": "Category 2",
-        "description": "Category 2 description",
+        "title": "Category 1",
+        "description": "Category 1 description",
         "subCategoryIds": [],
         "productIds": [
-            "642bb7608eadb0e7dc74f8e9",
-            "642bb7638eadb0e7dc74f8eb",
-            "642bb7688eadb0e7dc74f8ef"
+            "642e546175e308139831ad0d",
+            "642e546175e308139831ad1a",
+            "642e546175e308139831ad1d",
+            "642e546175e308139831ad1e",
+            "642e546175e308139831ad1f",
+            "642e546175e308139831ad20",
+            "642e546175e308139831ad21",
+            "642e546175e308139831ad22",
+            "642e546175e308139831ad23",
+            "642e546175e308139831ad24",
+            "642e546175e308139831ad25",
+            "642e546175e308139831ad26"
+
         ]
     }
 }

@@ -14,7 +14,7 @@ export default async function (req, res) {
 			await newSubCategory.save();
 
 			await category.updateOne({
-				$push: { subcategoryIds: newSubCategory._id },
+				$push: { subCategoryIds: newSubCategory._id },
 			});
 
 			await Promise.all(
