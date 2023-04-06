@@ -15,6 +15,11 @@ GET http://localhost:3000/api/admin/user/Russel.Klocko75@yahoo.com
 
 ###
 
+GET http://localhost:3000/api/admin/user/search
+?contactNumber=23123
+
+###
+
 PUT http://localhost:3000/api/admin/user/test1updated@email.com
 Content-Type: application/json
 
