@@ -1,0 +1,24 @@
+### 
+
+POST http://localhost:3000/api/public/user/register
+Content-Type: application/json
+
+{
+    "email": "test.5@gmail.com",
+    "password": "tester"
+}
+
+### verify registration email via token
+
+GET http://localhost:3000/api/public/user/register/verify
+?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QuNEBnbWFpbC5jb20iLCJpYXQiOjE2ODA4NTI4MTIsImV4cCI6MTY4MDg1MzExMn0.htNlyXCDU_dkni-UFvDJiDOp_NH03lZN4h5mAz1vgCE
+
+### login
+
+POST http://localhost:3000/api/public/user/login
+Content-Type: application/json
+
+{
+    "email": "test.5@gmail.com",
+    "password": "tester"
+}

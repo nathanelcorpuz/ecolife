@@ -44,6 +44,7 @@ const userSchema = new Schema({
 		},
 	],
 	dateCreated: { type: Date, default: Date.now },
+	isVerified: { type: Boolean, default: false },
 });
 
 const User = models.User || model("User", userSchema);

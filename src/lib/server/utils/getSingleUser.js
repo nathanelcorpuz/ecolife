@@ -9,7 +9,7 @@ export default async function (email) {
 	try {
 		const profileInfo = await ProfileInfo.findOne({ email });
 
-		const user = await User.findById(profileInfo.userId);
+		const user = await User.findById(profileInfo.userId).select("-password");
 
 		const shippingInfo = await ShippingInfo.findById(user.shippingInfoId);
 
