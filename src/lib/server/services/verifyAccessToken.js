@@ -1,11 +1,26 @@
 import jwt from "jsonwebtoken";
 
-export default function (req, res) {
+export default function (req) {
 	try {
-		const { accessToken } = req.cookies;
-		return jwt.verify(accessToken, process.env.ACCESS_TOKEN_SECRET);
+		const decodedToken = jwt.verify(
+			req.cookies.accessToken,
+			process.env.ACCESS_TOKEN_SECRET
+		);
+		return {
+			isSuccess: true,
+			userId: decodedToken.userId,
+		};
 	} catch (error) {
 		console.log(error);
-		return error.message;
+		if (error.message === "jwt expired") {
+			return {
+				isSuccess: false,
+				message: "access expired",
+			};
+		}
+		return {
+			isSuccess: false,
+			message: "invalid access token",
+		};
 	}
 }

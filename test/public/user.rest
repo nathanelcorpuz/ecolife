@@ -30,3 +30,31 @@ GET http://localhost:3000/api/public/user/
 ### refresh token
 
 GET http://localhost:3000/api/public/user/refresh
+
+### edit profile info
+
+PUT http://localhost:3000/api/public/user/profile-info
+Content-Type: application/json
+
+{
+    "firstName": "test",
+    "lastName": "five",
+    "contactNumber": "1234567890"
+}
+
+### edit shipping info
+
+PUT http://localhost:3000/api/public/user/shipping-info
+Content-Type: application/json
+
+{
+    "name": "",
+    "contactNumber": "",
+    "address": "test address",
+    "city": "test city",
+    "state": "test state",
+    "country": "test country",
+    "postalCode": "123456"
+}
+
+### change password
