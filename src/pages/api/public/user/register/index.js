@@ -46,7 +46,7 @@ export default async function handler(req, res) {
 		await newUser.save();
 
 		// send verification email to user
-		await sendVerificationEmail(email);
+		await sendVerificationEmail(email, newUser._id);
 
 		// return the new user without the password
 		const user = await User.findById(newUser._id).select("-password");

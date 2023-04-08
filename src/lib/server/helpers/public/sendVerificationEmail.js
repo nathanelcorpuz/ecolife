@@ -4,8 +4,8 @@ import { transporter } from "../../services/mailer";
 const SECRET = process.env.REGISTER_TOKEN_SECRET;
 const EXPIRATION = +process.env.REGISTER_TOKEN_EXPIRATION_MINUTES;
 
-export default async function (email) {
-	const token = jwt.sign({ email }, SECRET, { expiresIn: EXPIRATION });
+export default async function (email, userId) {
+	const token = jwt.sign({ userId }, SECRET, { expiresIn: EXPIRATION });
 
 	const domain =
 		process.env.NODE_ENV === "development"
