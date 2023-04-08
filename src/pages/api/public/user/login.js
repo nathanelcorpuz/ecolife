@@ -1,11 +1,8 @@
 import ProfileInfo from "@/lib/server/models/ProfileInfo";
 import User from "@/lib/server/models/User";
 import connectMongo from "@/lib/server/services/connectMongo";
+import createTokenPair from "@/lib/server/services/createTokenPair";
 import bcrypt from "bcrypt";
-import jwt from "jsonwebtoken";
-
-const SECRET = process.env.ACCESS_TOKEN_SECRET;
-const EXPIRATION = +process.env.ACCESS_TOKEN_EXPIRATION_MINUTES;
 
 export default async function handler(req, res) {
 	try {
@@ -27,11 +24,9 @@ export default async function handler(req, res) {
 			);
 		}
 
-		const token = jwt.sign({ userId: user._id }, SECRET, {
-			expiresIn: EXPIRATION,
-		});
+		await createTokenPair(user._id, res);
 
-		res.status(200).json({ token });
+		res.status(200).json({ success: true });
 	} catch (error) {
 		console.log(error);
 		res.status(500).json({ error: error.message });

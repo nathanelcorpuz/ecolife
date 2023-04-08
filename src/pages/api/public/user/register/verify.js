@@ -1,8 +1,7 @@
-import RefreshToken from "@/lib/server/models/RefreshToken";
 import User from "@/lib/server/models/User";
 import connectMongo from "@/lib/server/services/connectMongo";
 import jwt from "jsonwebtoken";
-import bcrypt from "bcrypt";
+import createTokenPair from "@/lib/server/services/createTokenPair";
 
 export default async function handler(req, res) {
 	// receive token from link sent to email
@@ -16,25 +15,8 @@ export default async function handler(req, res) {
 		isVerified: true,
 	});
 
-	const accessToken = jwt.sign(
-		{ userId: user._id },
-		process.env.ACCESS_TOKEN_SECRET,
-		{
-			expiresIn: +process.env.ACCESS_TOKEN_EXPIRATION_MINUTES,
-		}
-	);
+	await createTokenPair(user._id, res);
 
-	const refreshToken = jwt.sign(
-		{ userId: user._id },
-		process.env.REFRESH_TOKEN_SECRET,
-		{
-			expiresIn: process.env.REFRESH_TOKEN_EXPIRATION_MINUTES,
-		}
-	);
-
-	const hashedRefreshToken = await bcrypt.hash(refreshToken, +process.env.SALT);
-
-	await RefreshToken.create({ token: hashedRefreshToken, userId: user._id });
-
-	res.status(200).json({ accessToken, refreshToken });
+	res.status(200).json({ success: true });
+	// redirect to home page thats logged in
 }

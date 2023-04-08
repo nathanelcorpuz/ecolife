@@ -2,10 +2,12 @@ import jwt from "jsonwebtoken";
 import { transporter } from "../../services/mailer";
 
 const SECRET = process.env.REGISTER_TOKEN_SECRET;
-const EXPIRATION = +process.env.REGISTER_TOKEN_EXPIRATION_MINUTES;
+const EXPIRATION_MINUTES = +process.env.REGISTER_TOKEN_EXPIRATION_MINUTES * 60;
 
 export default async function (email, userId) {
-	const token = jwt.sign({ userId }, SECRET, { expiresIn: EXPIRATION });
+	const token = jwt.sign({ userId }, SECRET, {
+		expiresIn: EXPIRATION_MINUTES,
+	});
 
 	const domain =
 		process.env.NODE_ENV === "development"

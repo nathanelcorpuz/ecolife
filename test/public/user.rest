@@ -4,7 +4,7 @@ POST http://localhost:3000/api/public/user/register
 Content-Type: application/json
 
 {
-    "email": "test.6@gmail.com",
+    "email": "test.9@gmail.com",
     "password": "tester"
 }
 
@@ -26,4 +26,7 @@ Content-Type: application/json
 ### get user profile
 
 GET http://localhost:3000/api/public/user/
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDJmY2FiYTk5MzI4ZWQ0MTljZDQ3MGUiLCJpYXQiOjE2ODA4NjQ4NzUsImV4cCI6MTY4MDg2NjMxNX0.VyGiP4OBRrdtFfxE4yG3rrmoh7bINsPw8CRhyM2fbgg
+
+### refresh token
+
+GET http://localhost:3000/api/public/user/refresh

@@ -7,7 +7,13 @@ import verifyAccessToken from "@/lib/server/services/verifyAccessToken";
 
 export default async function handler(req, res) {
 	try {
-		const { userId } = verifyAccessToken(req);
+		const decodedToken = verifyAccessToken(req, res);
+
+		if (decodedToken === "jwt expired") {
+			throw new Error("access expired");
+		}
+
+		const { userId } = decodedToken;
 
 		await connectMongo();
 
