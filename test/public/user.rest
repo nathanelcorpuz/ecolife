@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
     "email": "test.5@gmail.com",
-    "password": "tester"
+    "password": "tester1"
 }
 
 ### get user profile
@@ -58,3 +58,11 @@ Content-Type: application/json
 }
 
 ### change password
+
+PUT http://localhost:3000/api/public/user/change-password
+Content-Type: application/json
+
+{
+    "password": "tester",
+    "newPassword": "tester1"
+}
