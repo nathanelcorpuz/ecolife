@@ -1,5 +1,6 @@
 import RefreshToken from "@/lib/server/models/RefreshToken";
 import User from "@/lib/server/models/User";
+import connectMongo from "@/lib/server/services/connectMongo";
 import verifyAccessToken from "@/lib/server/services/verifyAccessToken";
 import bcrypt from "bcrypt";
 
@@ -10,9 +11,12 @@ export default async function handler(req, res) {
 
 	try {
 		const verification = verifyAccessToken(req);
+
 		if (!verification) {
 			return res.status(401).json({ message: "Unauthorized" });
 		}
+
+		await connectMongo();
 
 		const { password, newPassword } = req.body;
 

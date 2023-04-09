@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
     "email": "test.5@gmail.com",
-    "password": "tester1"
+    "password": "tester3"
 }
 
 ### get user profile
@@ -65,4 +65,29 @@ Content-Type: application/json
 {
     "password": "tester",
     "newPassword": "tester1"
+}
+
+### forgot password - send link
+
+POST http://localhost:3000/api/public/user/forgot-password/send-link
+Content-Type: application/json
+
+{
+    "email": "test.5@gmail.com"
+}
+
+### forgot password - confirm link
+
+GET http://localhost:3000/api/public/user/forgot-password/confirm-link
+?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QuNUBnbWFpbC5jb20iLCJpYXQiOjE2ODA5OTg5MDMsImV4cCI6MTY4MDk5OTgwM30.71y0olDgODy0VGhrDmcPtw6Jq-NZz2UB2Yr1g-yqZVI
+
+### forgot password - change password
+
+PUT http://localhost:3000/api/public/user/forgot-password/change-password
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3QuNUBnbWFpbC5jb20iLCJpYXQiOjE2ODEwMDQ5NDQsImV4cCI6MTY4MTAwNTI0NH0.Zvjcts6kYsl_Y8ijE9M_Xc4NhWIwnUNe9jixsVZnte0",
+    "password": "tester3",
+    "newPassword": "tester4"
 }
