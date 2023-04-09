@@ -20,7 +20,7 @@ Content-Type: application/json
 
 {
     "email": "test.5@gmail.com",
-    "password": "tester3"
+    "password": "tester4"
 }
 
 ### get user profile
@@ -91,3 +91,7 @@ Content-Type: application/json
     "password": "tester3",
     "newPassword": "tester4"
 }
+
+### logout 
+
+DELETE http://localhost:3000/api/public/user/logout
