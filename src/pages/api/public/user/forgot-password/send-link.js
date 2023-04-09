@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import { transporter } from "@/lib/server/services/mailer";
+import ProfileInfo from "@/lib/server/models/ProfileInfo";
 
 const SECRET = process.env.FORGOT_PASSWORD_SECRET;
 const EXPIRATION = +process.env.FORGOT_PASSWORD_EXPIRATION_MINUTES;
@@ -11,6 +12,10 @@ export default async function handler(req, res) {
 
 	try {
 		const { email } = req.body;
+
+		const profileInfo = await ProfileInfo.findOne({ email });
+
+		if (!profileInfo) throw new Error("Email not found");
 
 		const token = jwt.sign({ email }, SECRET, {
 			expiresIn: EXPIRATION * 60,
