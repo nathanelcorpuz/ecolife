@@ -6,9 +6,18 @@ POST http://localhost:3000/api/public/common/add-to-cart
 Content-Type: application/json
 
 {
-    "userId": "642e8952512ac43878e4c91a",
-    "product": {
-        "productId": "642e546175e308139831ad1e",
-        "quantity": 2
-    }
+    "productId": "",
+    "quantity": 1,
+    "options": [
+        {
+            "optionId": "",
+            "title": "",
+            "value": ""
+        },
+        {
+            "optionId": "",
+            "title": "",
+            "value": ""
+        }
+    ]
 }

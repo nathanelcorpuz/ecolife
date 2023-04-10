@@ -1,5 +1,6 @@
 import Cart from "@/lib/server/models/Cart";
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAccessToken from "@/lib/server/services/verifyAccessToken";
 
 export default async function handler(req, res) {
 	if (req.method !== "PUT") {
@@ -8,6 +9,10 @@ export default async function handler(req, res) {
 	}
 
 	try {
+		const verification = verifyAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
 
 		const { cartId, productId, quantity } = req.body;
