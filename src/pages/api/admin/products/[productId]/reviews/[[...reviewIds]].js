@@ -3,9 +3,14 @@ import deleteReviews from "@/lib/server/helpers/admin/products/reviews/deleteRev
 import editReview from "@/lib/server/helpers/admin/products/reviews/editReview";
 import getReviews from "@/lib/server/helpers/admin/products/reviews/getReviews";
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 
 export default async function handler(req, res) {
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
 		if (req.method === "POST") {
 			await createReview(req, res);

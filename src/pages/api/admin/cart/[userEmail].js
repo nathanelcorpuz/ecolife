@@ -2,9 +2,14 @@ import addCartProducts from "@/lib/server/helpers/admin/cart/addCartProducts";
 import getCart from "@/lib/server/helpers/admin/cart/getCart";
 import updateCartProduct from "@/lib/server/helpers/admin/cart/updateCartProduct";
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 
 export default async function handler(req, res) {
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
 		if (req.method === "POST") {
 			await addCartProducts(req, res);

@@ -2,10 +2,16 @@ import Article from "@/lib/server/models/Article";
 import connectMongo from "@/lib/server/services/connectMongo";
 import slugify from "slugify";
 import { sanitize } from "isomorphic-dompurify";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 
 export default async function handler(req, res) {
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
+
 		if (req.method === "POST") {
 			const slug = slugify(req.body.heading.title, { lower: true });
 			const { heading } = req.body;

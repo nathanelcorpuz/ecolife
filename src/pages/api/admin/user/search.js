@@ -1,6 +1,7 @@
 import User from "@/lib/server/models/User";
 import ProfileInfo from "@/lib/server/models/ProfileInfo";
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 
 export default async function handler(req, res) {
 	if (req.method !== "GET") {
@@ -8,6 +9,10 @@ export default async function handler(req, res) {
 		return;
 	}
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
 		const { name, contactNumber } = req.query;
 		let profiles = [];

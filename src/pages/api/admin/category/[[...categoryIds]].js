@@ -3,9 +3,14 @@ import deleteCategories from "@/lib/server/helpers/admin/category/deleteCategori
 import getCategories from "@/lib/server/helpers/admin/category/getCategories";
 import updateCategory from "@/lib/server/helpers/admin/category/updateCategory";
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 
 export default async function handler(req, res) {
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		await connectMongo();
 		if (req.method === "POST") {
 			await createCategory(req, res);

@@ -1,4 +1,5 @@
 import connectMongo from "@/lib/server/services/connectMongo";
+import verifyAdminAccessToken from "@/lib/server/services/verifyAdminAccessToken";
 import { faker } from "@faker-js/faker";
 
 const createUser = async () => {
@@ -12,6 +13,10 @@ const createUser = async () => {
 	};
 
 	try {
+		const verification = verifyAdminAccessToken(req);
+
+		if (!verification.isSuccess) throw new Error(verification.message);
+
 		const response = await fetch(url, {
 			method: "POST",
 			headers: {
