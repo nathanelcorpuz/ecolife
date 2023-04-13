@@ -6,6 +6,8 @@ import defaultImg2 from "../../../../public/assets/products/product-2.jpg";
 import defaultImg3 from "../../../../public/assets/products/product-3.jpg";
 import CarouselControls from "./CarouselControls";
 import ImageSection from "./ImageSection";
+import PrevNextBtns from "./PrevNextBtns";
+import { v4 as uuidv4 } from "uuid";
 
 const sampleImageSections = [
 	{
@@ -43,12 +45,12 @@ const HeroLayout3 = ({
 }) => {
 	const [activeSection, setActiveSection] = useState(0);
 	return (
-		<section className="flex flex-col gap-10 items-center">
+		<section className="flex flex-col gap-10 items-center relative">
 			<h1 className="text-5xl font-bold text-accent-dark">{heading1}</h1>
 			{/* WIP
-                --> prev / next btns
-                --> auto slide     
-                --> dots UI
+                --> prev / next btns -- WIP
+                --> auto slide
+                --> controls UI
             */}
 			<div
 				className={`transition-all flex ${
@@ -60,9 +62,17 @@ const HeroLayout3 = ({
 				}`}
 			>
 				{imageSections.map((imageSection) => (
-					<ImageSection activeSection={activeSection} {...imageSection} />
+					<ImageSection
+						key={uuidv4()}
+						activeSection={activeSection}
+						{...imageSection}
+					/>
 				))}
 			</div>
+			{/* <PrevNextBtns
+				activeSection={activeSection}
+				setActiveSection={setActiveSection}
+			/> */}
 			<CarouselControls
 				activeSection={activeSection}
 				setActiveSection={setActiveSection}
