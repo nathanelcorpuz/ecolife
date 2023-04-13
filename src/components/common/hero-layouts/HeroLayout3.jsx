@@ -45,7 +45,11 @@ const HeroLayout3 = ({
 	return (
 		<section className="flex flex-col gap-10 items-center">
 			<h1 className="text-5xl font-bold text-accent-dark">{heading1}</h1>
-			{/* WIP */}
+			{/* WIP
+                --> prev / next btns
+                --> auto slide     
+                --> dots UI
+            */}
 			<div
 				className={`transition-all flex ${
 					activeSection === 0
