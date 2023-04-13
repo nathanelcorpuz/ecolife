@@ -2,10 +2,10 @@ import "./globals.css";
 
 import { Lato } from "next/font/google";
 
-import BlogPreview from "@/components/common/blogPreview";
-import Footer from "@/components/common/footer";
-import Header from "@/components/common/header";
-import Newsletter from "@/components/common/newsletter";
+import BlogPreview from "@/components/common/sections/BlogInvite";
+import Footer from "@/components/common/sections/Footer";
+import Header from "@/components/common/sections/Header";
+import Newsletter from "@/components/common/sections/newsletter";
 
 const lato = Lato({
 	variable: "--font-lato",

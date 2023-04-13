@@ -11,19 +11,21 @@ export default async function () {
 
 	console.log("featuredProducts");
 	console.log(featuredProducts);
-	return <div>
-		<h1>This is home</h1>
-		<section>
-			<h2>This is a section</h2>
-			<p>With some paragraph on it</p>
-		</section>
-		<section>
-			<h2>This is a section</h2>
-			<p>With some paragraph on it</p>
-		</section>
-		<section>
-			<h2>This is a section</h2>
-			<p>With some paragraph on it</p>
-		</section>
-	</div>;
+	return (
+		<div>
+			<h1 className="text-accent-light-300">This is home</h1>
+			<section>
+				<h2>This is a section</h2>
+				<p>With some paragraph on it</p>
+			</section>
+			<section>
+				<h2>This is a section</h2>
+				<p>With some paragraph on it</p>
+			</section>
+			<section>
+				<h2>This is a section</h2>
+				<p>With some paragraph on it</p>
+			</section>
+		</div>
+	);
 }
