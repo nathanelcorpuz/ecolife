@@ -11,10 +11,10 @@ export default function CustomButton({ children, size = "sm", light = false }) {
 
 	if (size === "sm") {
 		sizeClass = "px-5 py-3 text-base";
-	} else if (size === "lg") {
-		sizeClass = "px-8 py-4 text-lg";
 	} else if (size === "md") {
 		sizeClass = "px-7 py-4 text-base";
+	} else if (size === "lg") {
+		sizeClass = "px-8 py-4 text-lg";
 	}
 
 	return (
