@@ -1,7 +1,7 @@
 import CustomButton from "@/components/common/buttons/CustomButton";
 import BlogCard from "@/components/common/cards/BlogCard";
 import ProductCard from "@/components/common/cards/ProductCard";
-import HeroLayout1 from "@/components/common/hero-layouts/HeroLayout1";
+import HeroLayout2 from "@/components/common/hero-layouts/HeroLayout2";
 import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
@@ -17,7 +17,7 @@ export default async function () {
 	console.log(featuredProducts);
 	return (
 		<div>
-			<HeroLayout1 />
+			<HeroLayout2 />
 			<section className="container max-w-7xl">
 				<h1 className="text-accent-light-300">This is home</h1>
 				<ProductCard />
