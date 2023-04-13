@@ -1,4 +1,6 @@
 import styles from "./Carousel.module.css";
+import NextIcon from "./NextIcon";
+import PrevIcon from "./PrevIcon";
 
 export default function CarouselControls({ activeSection, setActiveSection }) {
 	const prevClick = () => {
@@ -17,7 +19,7 @@ export default function CarouselControls({ activeSection, setActiveSection }) {
 					className={`${activeSection === 0 ? "hidden" : ""}`}
 					onClick={prevClick}
 				>
-					Prev
+					<PrevIcon />
 				</button>
 			</div>
 			<div className="absolute right-10 bottom-1/2">
@@ -25,13 +27,31 @@ export default function CarouselControls({ activeSection, setActiveSection }) {
 					className={`${activeSection === 2 ? "hidden" : ""}`}
 					onClick={nextClick}
 				>
-					Next
+					<NextIcon />
 				</button>
 			</div>
 			<div className="flex gap-5">
-				<button onClick={() => setActiveSection(0)}>1</button>
-				<button onClick={() => setActiveSection(1)}>2</button>
-				<button onClick={() => setActiveSection(2)}>3</button>
+				<button
+					onClick={() => setActiveSection(0)}
+					className={`${styles.indicator} ${
+						activeSection === 0 ? styles.active : ""
+					}`}
+					aria-label="image section 1"
+				/>
+				<button
+					onClick={() => setActiveSection(1)}
+					className={`${styles.indicator} ${
+						activeSection === 1 ? styles.active : ""
+					}`}
+					aria-label="image section 2"
+				/>
+				<button
+					onClick={() => setActiveSection(2)}
+					className={`${styles.indicator} ${
+						activeSection === 2 ? styles.active : ""
+					}`}
+					aria-label="image section 3"
+				/>
 			</div>
 		</>
 	);

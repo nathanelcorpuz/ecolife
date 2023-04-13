@@ -6,7 +6,6 @@ import defaultImg2 from "../../../../public/assets/products/product-2.jpg";
 import defaultImg3 from "../../../../public/assets/products/product-3.jpg";
 import CarouselControls from "./CarouselControls";
 import ImageSection from "./ImageSection";
-import PrevNextBtns from "./PrevNextBtns";
 import { v4 as uuidv4 } from "uuid";
 
 const sampleImageSections = [
@@ -47,11 +46,6 @@ const HeroLayout3 = ({
 	return (
 		<section className="flex flex-col gap-10 items-center relative">
 			<h1 className="text-5xl font-bold text-accent-dark">{heading1}</h1>
-			{/* WIP
-                --> prev / next btns -- WIP
-                --> auto slide
-                --> controls UI
-            */}
 			<div
 				className={`transition-all flex ${
 					activeSection === 0
@@ -69,10 +63,6 @@ const HeroLayout3 = ({
 					/>
 				))}
 			</div>
-			{/* <PrevNextBtns
-				activeSection={activeSection}
-				setActiveSection={setActiveSection}
-			/> */}
 			<CarouselControls
 				activeSection={activeSection}
 				setActiveSection={setActiveSection}

@@ -1,0 +1,10 @@
+.indicator {
+	width: 10px;
+	height: 10px;
+	border-radius: 1000px;
+	border: 1px solid #25995C;
+}
+
+.active {
+	background-color: #25995C;
+}
