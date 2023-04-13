@@ -13,10 +13,11 @@ const ImageSection = ({
 	secondaryCTAText,
 	src,
 	alt,
+	isMirrored = false,
 }) => {
 	return (
-		<div className="flex items-center justify-center w-screen gap-52">
-			<div className="flex flex-col gap-7">
+		<div className="flex flex-row items-center justify-center w-screen gap-52">
+			<div className={`flex flex-col gap-7 ${isMirrored && "order-1"}`}>
 				<h2 className="text-3xl font-bold text-accent-dark">{heading2}</h2>
 				<p className="text-xl text-standard-dark">{subtitle}</p>
 				<p>{textContent}</p>

@@ -2,6 +2,7 @@ import CustomButton from "@/components/common/buttons/CustomButton";
 import BlogCard from "@/components/common/cards/BlogCard";
 import ProductCard from "@/components/common/cards/ProductCard";
 import HeroLayout3 from "@/components/common/hero-layouts/HeroLayout3";
+import HeroLayout4 from "@/components/common/hero-layouts/HeroLayout4";
 import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
@@ -17,6 +18,7 @@ export default async function () {
 	console.log(featuredProducts);
 	return (
 		<div className="overflow-hidden">
+			<HeroLayout4 />
 			<HeroLayout3 />
 			<section className="container max-w-7xl">
 				<h1 className="text-accent-light-300">This is home</h1>
