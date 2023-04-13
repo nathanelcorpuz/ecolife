@@ -11,5 +11,19 @@ export default async function () {
 
 	console.log("featuredProducts");
 	console.log(featuredProducts);
-	return <h1 className="font-bold underline">Hello, this is home.</h1>;
+	return <div>
+		<h1>This is home</h1>
+		<section>
+			<h2>This is a section</h2>
+			<p>With some paragraph on it</p>
+		</section>
+		<section>
+			<h2>This is a section</h2>
+			<p>With some paragraph on it</p>
+		</section>
+		<section>
+			<h2>This is a section</h2>
+			<p>With some paragraph on it</p>
+		</section>
+	</div>;
 }
