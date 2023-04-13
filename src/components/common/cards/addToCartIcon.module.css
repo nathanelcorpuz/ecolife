@@ -1,0 +1,13 @@
+.addToCartIcon {
+	cursor: pointer;
+}
+
+.addToCartIcon > .rect {
+	fill: #25995c;
+	transition: all 0.15s;
+}
+
+.addToCartIcon:hover > .rect {
+	fill: #12370E;
+	transition: all 0.15s ease-out;
+}
