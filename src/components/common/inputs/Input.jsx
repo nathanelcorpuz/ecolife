@@ -3,7 +3,7 @@
 const Input = ({
 	label = "Default label",
 	labelLight,
-	customWidth = "96",
+	customWidth = 96,
 	...inputProps
 }) => {
 	return (

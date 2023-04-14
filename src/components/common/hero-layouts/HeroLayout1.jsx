@@ -15,8 +15,8 @@ export default function HeroLayout1({
 }) {
 	return (
 		<section className={`flex items-center justify-between ps-48 ${bgColor}`}>
-			<div className="flex flex-col gap-7 w-[30%]">
-				<h1 className="text-5xl font-bold text-accent-dark">{title}</h1>
+			<div className="flex flex-col gap-7 w-[40%]">
+				<h1 className="text-7xl font-bold text-accent-dark">{title}</h1>
 				<p className="text-2xl text-standard-dark">{subtitle}</p>
 				<div className="flex gap-5 items-center">
 					<CustomButton size="md">{mainCTAText}</CustomButton>
@@ -26,7 +26,7 @@ export default function HeroLayout1({
 					</div>
 				</div>
 			</div>
-			<div className="w-[60%] h-[550px] relative">
+			<div className="w-[50%] h-[550px] relative">
 				<Image src={src} fill className="object-cover object-top" alt={alt} />
 			</div>
 		</section>
