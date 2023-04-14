@@ -1,7 +1,3 @@
-import Logo from "../../Logo";
-import FacebookIcon from "../../socials/FacebookIcon";
-import InstagramIcon from "../../socials/InstagramIcon";
-import TwitterIcon from "../../socials/TwitterIcon";
 import FooterContact from "./FooterContact";
 import FooterQuickLinks from "./FooterQuickLinks";
 import FooterResources from "./FooterResources";
