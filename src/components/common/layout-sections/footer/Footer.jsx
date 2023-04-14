@@ -15,7 +15,7 @@ const Footer = () => {
 			</div>
 			<div className="flex flex-col gap-4 items-center">
 				<p className="text-standard-balanced text-base">
-					© 2023 Eco-Shop. All rights reserved.
+					© 2023 EcoLife. All rights reserved.
 				</p>
 				<small className="italic">A passion project by Nathanel Corpuz</small>
 				<a href="https://github.com/nathanelcorpuz/ecolife" target="_blank">

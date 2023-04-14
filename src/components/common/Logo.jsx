@@ -3,7 +3,7 @@ import logo from "../../../public/assets/logo.png";
 
 const Logo = () => {
 	return (
-		<div className="flex gap-4">
+		<div className="flex items-center">
 			<div>
 				<Image src={logo} width={50} height="auto" />
 			</div>
