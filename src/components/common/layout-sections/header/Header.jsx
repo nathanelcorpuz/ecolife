@@ -10,19 +10,19 @@ const Header = () => {
 			<nav>
 				<ul className="flex gap-8 items-center">
 					<li>
-						<HeaderLink href="">Home</HeaderLink>
+						<HeaderLink href="/">Home</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">Products</HeaderLink>
+						<HeaderLink href="products">Products</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">About</HeaderLink>
+						<HeaderLink href="about">About</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">Contact</HeaderLink>
+						<HeaderLink href="contact">Contact</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">Blog</HeaderLink>
+						<HeaderLink href="blog">Blog</HeaderLink>
 					</li>
 				</ul>
 			</nav>
