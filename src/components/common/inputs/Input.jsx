@@ -1,13 +1,8 @@
 "use input";
 
-const Input = ({
-	label = "Default label",
-	labelLight,
-	customWidth = 96,
-	...inputProps
-}) => {
+const Input = ({ label = "Default label", labelLight, ...inputProps }) => {
 	return (
-		<div className={`flex flex-col gap-1 w-${customWidth}`}>
+		<div className="flex flex-col gap-1 w-full">
 			<label
 				className={`font-bold ${
 					labelLight ? "text-standard-balanced-200" : "text-standard-dark-300"

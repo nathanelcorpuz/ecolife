@@ -15,8 +15,8 @@ const SpecialOfferCard = ({
 			flex flex-col items-center p-8 rounded 
 			justify-between w-[550px] h-[550px] relative
 			border border-standard-light cursor-pointer
-			transition-all duration-700
-			hover:scale-[1.05] hover:shadow-2xl
+			transition-all duration-500
+			hover:scale-[1.03] hover:shadow-2xl
 			"
 		>
 			<Image

@@ -1,5 +1,6 @@
 "use client";
 
+import Button from "@/components/common/buttons/Button";
 import SpecialOfferCard from "./SpecialOfferCard";
 
 const SpecialOffers = () => {
@@ -7,7 +8,7 @@ const SpecialOffers = () => {
 		<section className="flex flex-col gap-24 items-center py-40">
 			<div className="flex flex-col gap-4 text-center">
 				<h2 className="text-6xl text-accent-dark font-bold">Special Offers</h2>
-				<p cname="text-base text-standard-balanced">
+				<p className="text-base text-standard-balanced">
 					Enjoy great savings on your favorite eco-friendly items
 				</p>
 			</div>
@@ -25,6 +26,7 @@ const SpecialOffers = () => {
 					lowerTag="Order today!"
 				/>
 			</div>
+			<Button size="lg">Browse Products</Button>
 		</section>
 	);
 };
