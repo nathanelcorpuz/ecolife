@@ -3,7 +3,7 @@ import "./globals.css";
 import { Lato } from "next/font/google";
 
 import BlogPreview from "@/components/common/sections/BlogInvite";
-import Footer from "@/components/common/sections/Footer";
+import Footer from "@/components/common/sections/footer/Footer";
 import Header from "@/components/common/sections/Header";
 import Newsletter from "@/components/common/sections/newsletter";
 
