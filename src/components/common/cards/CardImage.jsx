@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function CardImage({ src }) {
 	return (
-		<div className="w-auto h-40 relative overflow-hidden">
+		<div className="w-auto h-80 relative overflow-hidden">
 			<Image
 				className="object-cover object-center"
 				src={src}
