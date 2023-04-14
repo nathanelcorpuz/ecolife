@@ -1,6 +1,6 @@
 import Image from "next/image";
-import CustomButton from "../buttons/CustomButton";
-import CustomButton2 from "../buttons/CustomButton2";
+import CustomButton from "../buttons/Button";
+import CustomButton2 from "../buttons/Button2";
 import RightArrowIcon from "./RightArrowIcon";
 import defaultImg from "../../../../public/assets/products/product-1.jpg";
 

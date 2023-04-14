@@ -1,4 +1,4 @@
-export default function CustomButton({ children, size = "sm", light = false }) {
+export default function Button({ children, size = "sm", light = false }) {
 	let variantClass;
 
 	if (light) {

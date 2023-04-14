@@ -1,3 +1,3 @@
-export default function CustomButton2({ children }) {
+export default function Button2({ children }) {
 	return <button className="text-accent-balanced font-bold">{children}</button>;
 }

@@ -9,7 +9,7 @@ const defaultLabelProps = {
 	htmlFor: "checkboxId1",
 };
 
-export default function CustomCheckbox({
+export default function Checkbox({
 	inputProps = defaultInputProps,
 	labelProps = defaultLabelProps,
 	labelText = "Default label text",
