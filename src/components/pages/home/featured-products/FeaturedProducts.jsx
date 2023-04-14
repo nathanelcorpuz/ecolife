@@ -6,7 +6,7 @@ import ProductCard from "@/components/common/cards/ProductCard";
 const FeaturedProducts = () => {
 	return (
 		<section className="flex flex-col py-52 gap-24 items-center bg-accent-light-100">
-			<div className="flex flex-col gap-2">
+			<div className="flex flex-col gap-2 text-center">
 				<h2 className="text-5xl text-accent-dark font-bold">
 					Featured Products
 				</h2>
