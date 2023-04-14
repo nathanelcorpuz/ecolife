@@ -1,4 +1,5 @@
 import Checkbox from "@/components/common/inputs/Checkbox";
+import SearchInput from "@/components/common/inputs/search-input/SearchInput";
 import ClientComponentWithDropdown from "@/components/pages/home/ClientComponentWithDropdown";
 import ClientComponentWithInput from "@/components/pages/home/ClientComponentWithInput";
 import Product from "@/lib/server/models/Product";
@@ -17,6 +18,7 @@ export default async function () {
 	return (
 		<div className="overflow-hidden">
 			<section className="container max-w-7xl flex flex-col gap-80 items-start">
+				<SearchInput />
 				<ClientComponentWithInput />
 				<ClientComponentWithDropdown />
 				<h1 className="text-accent-light-300">This is home</h1>

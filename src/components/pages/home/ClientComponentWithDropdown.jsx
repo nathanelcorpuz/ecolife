@@ -1,6 +1,6 @@
 "use client";
 
-import Dropdown from "@/components/common/inputs/Dropdown/Dropdown";
+import Dropdown from "@/components/common/inputs/dropdown/Dropdown";
 import { useState } from "react";
 
 const SampleComponentWithDropdown = () => {
