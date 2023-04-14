@@ -2,6 +2,7 @@
 
 import FeaturedProducts from "./featured-products/FeaturedProducts";
 import Hero from "./hero/Hero";
+import SpecialOffers from "./special-offers/SpecialOffers";
 import Stats from "./stats/Stats";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
 			<Hero />
 			<Stats />
 			<FeaturedProducts />
+			<SpecialOffers />
 		</main>
 	);
 };
