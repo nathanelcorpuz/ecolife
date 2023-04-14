@@ -5,7 +5,7 @@ import { Lato } from "next/font/google";
 import BlogPreview from "@/components/common/layout-sections/BlogInvite";
 import Footer from "@/components/common/layout-sections/footer/Footer";
 import Header from "@/components/common/layout-sections/header/Header";
-import Newsletter from "@/components/common/layout-sections/newsletter";
+import Newsletter from "@/components/common/layout-sections/Newsletter";
 import Announcement from "@/components/common/layout-sections/Announcement";
 
 const lato = Lato({

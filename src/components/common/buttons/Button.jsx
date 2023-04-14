@@ -2,9 +2,11 @@ export default function Button({ children, size = "sm", light = false }) {
 	let variantClass;
 
 	if (light) {
-		variantClass = "bg-accent-light-100 text-accent-dark";
+		variantClass =
+			"bg-accent-light-100 text-accent-dark hover:bg-accent-light-300 transition-all";
 	} else {
-		variantClass = "bg-accent-dark text-accent-light-100";
+		variantClass =
+			"bg-accent-dark text-accent-light hover:bg-accent-dark-300 transition-all";
 	}
 
 	let sizeClass;
