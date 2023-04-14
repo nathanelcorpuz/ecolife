@@ -6,7 +6,6 @@ import { useState } from "react";
 const SampleComponentWithDropdown = () => {
 	// null means there's no default value
 	const [selectedOption, setSelectedOption] = useState("option-2");
-	console.log(selectedOption);
 	return (
 		<Dropdown
 			label="Sample dropdown"

@@ -1,6 +1,6 @@
 import Checkbox from "@/components/common/inputs/Checkbox";
-import Dropdown from "@/components/common/inputs/Dropdown/Dropdown";
-import SampleComponentWithDropdown from "@/components/pages/home/SampleComponentWithDropdown";
+import ClientComponentWithDropdown from "@/components/pages/home/ClientComponentWithDropdown";
+import ClientComponentWithInput from "@/components/pages/home/ClientComponentWithInput";
 import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
@@ -17,7 +17,8 @@ export default async function () {
 	return (
 		<div className="overflow-hidden">
 			<section className="container max-w-7xl flex flex-col gap-80 items-start">
-				<SampleComponentWithDropdown />
+				<ClientComponentWithInput />
+				<ClientComponentWithDropdown />
 				<h1 className="text-accent-light-300">This is home</h1>
 				<Checkbox />
 				{/* <ProductCard />
