@@ -1,9 +1,6 @@
-import Button from "@/components/common/buttons/Button";
-import BlogCard from "@/components/common/cards/BlogCard";
-import ProductCard from "@/components/common/cards/ProductCard";
-import HeroLayout3 from "@/components/common/hero-layouts/HeroLayout3";
-import HeroLayout4 from "@/components/common/hero-layouts/HeroLayout4";
 import Checkbox from "@/components/common/inputs/Checkbox";
+import Dropdown from "@/components/common/inputs/Dropdown/Dropdown";
+import SampleComponentWithDropdown from "@/components/pages/home/SampleComponentWithDropdown";
 import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
@@ -19,10 +16,11 @@ export default async function () {
 	console.log(featuredProducts);
 	return (
 		<div className="overflow-hidden">
-			<section className="container max-w-7xl flex flex-col gap-10 items-start">
+			<section className="container max-w-7xl flex flex-col gap-80 items-start">
+				<SampleComponentWithDropdown />
 				<h1 className="text-accent-light-300">This is home</h1>
 				<Checkbox />
-				<ProductCard />
+				{/* <ProductCard />
 				<BlogCard />
 				<Button size="md">Button</Button>
 				<section>
@@ -36,10 +34,10 @@ export default async function () {
 				<section>
 					<h2>This is a section</h2>
 					<p>With some paragraph on it</p>
-				</section>
+				</section> */}
 			</section>
-			<HeroLayout4 />
-			<HeroLayout3 />
+			{/* <HeroLayout4 />
+			<HeroLayout3 /> */}
 		</div>
 	);
 }
