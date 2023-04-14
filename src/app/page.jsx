@@ -1,3 +1,4 @@
+import Home from "@/components/pages/home/Home";
 import Product from "@/lib/server/models/Product";
 import connectMongo from "@/lib/server/services/connectMongo";
 
@@ -11,9 +12,5 @@ export default async function () {
 
 	console.log("featuredProducts");
 	console.log(featuredProducts);
-	return (
-		<div className="overflow-hidden">
-			<section className="container max-w-7xl flex flex-col gap-80 items-start"></section>
-		</div>
-	);
+	return <Home />;
 }
