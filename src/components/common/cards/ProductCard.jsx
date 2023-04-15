@@ -1,3 +1,5 @@
+"use client";
+
 import CardContainer from "./CardContainer";
 import CardImage from "./CardImage";
 import productImg1 from "../../../../public/assets/products/product-1.jpg";
@@ -13,7 +15,7 @@ import productImg10 from "../../../../public/assets/products/product-10.jpg";
 import productImg11 from "../../../../public/assets/products/product-11.jpg";
 import AddToCartIcon from "./AddToCartIcon";
 
-export default function ProductCard({ size }) {
+const ProductCard = ({ size }) => {
 	const randomizedImg = Math.floor(Math.random() * 11) + 1;
 
 	const getRandomImg = () => {
@@ -82,4 +84,6 @@ export default function ProductCard({ size }) {
 			</div>
 		</CardContainer>
 	);
-}
+};
+
+export default ProductCard;
