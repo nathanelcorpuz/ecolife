@@ -44,7 +44,7 @@ const ProductTiles = () => {
 
 	return (
 		<section className="flex flex-col gap-24 items-center">
-			<div className="flex flex-wrap gap-24">
+			<div className="flex flex-wrap gap-6">
 				{products.map((product) => (
 					<ProductCard key={product.id} size="sm" />
 				))}

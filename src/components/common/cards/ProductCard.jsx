@@ -45,18 +45,40 @@ export default function ProductCard({ size }) {
 		}
 	};
 
+	if (size === "sm") {
+		return (
+			<CardContainer size={size}>
+				<CardImage size={size} src={getRandomImg()} />
+				<div className="flex flex-col gap-3 p-4 pt-0">
+					<h2 className="text-standard-dark text-base">
+						EcoSavers Silicone Food Storage Bags
+					</h2>
+					<p className="text-standard-balanced text-sm">
+						Kitchen - Reusable containers
+					</p>
+					<div className="flex items-center justify-between">
+						<p className="text-accent-balanced text-xl font-bold">₱500</p>
+						<AddToCartIcon />
+					</div>
+				</div>
+			</CardContainer>
+		);
+	}
+
 	return (
 		<CardContainer size={size}>
 			<CardImage size={size} src={getRandomImg()} />
-			<h2 className="text-standard-dark text-xl">
-				EcoSavers Silicone Food Storage Bags
-			</h2>
-			<p className="text-standard-balanced text-sm">
-				Kitchen - Reusable containers
-			</p>
-			<div className="flex items-center justify-between">
-				<p className="text-accent-balanced text-xl font-bold">₱500</p>
-				<AddToCartIcon />
+			<div className="flex flex-col gap-3 p-4 pt-0">
+				<h2 className="text-standard-dark text-xl">
+					EcoSavers Silicone Food Storage Bags
+				</h2>
+				<p className="text-standard-balanced text-sm">
+					Kitchen - Reusable containers
+				</p>
+				<div className="flex items-center justify-between">
+					<p className="text-accent-balanced text-xl font-bold">₱500</p>
+					<AddToCartIcon />
+				</div>
 			</div>
 		</CardContainer>
 	);
