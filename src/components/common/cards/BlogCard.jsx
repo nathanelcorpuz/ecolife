@@ -29,11 +29,13 @@ export default function BlogCard() {
 	return (
 		<CardContainer>
 			<CardImage src={getRandomImg()} />
-			<p className="text-standard-balanced text-sm">Nathanel Corpuz</p>
-			<h2 className="text-standard-dark text-xl">
-				10 Simple Steps to Start Living a Zero-Waste Lifestyle
-			</h2>
-			<p className="text-standard-balanced text-sm">July 1, 2023</p>
+			<div className="p-4 pt-0 flex flex-col gap-3">
+				<p className="text-standard-balanced text-sm">Nathanel Corpuz</p>
+				<h2 className="text-standard-dark text-xl">
+					10 Simple Steps to Start Living a Zero-Waste Lifestyle
+				</h2>
+				<p className="text-standard-balanced text-sm">July 1, 2023</p>
+			</div>
 		</CardContainer>
 	);
 }
