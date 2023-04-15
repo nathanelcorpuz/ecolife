@@ -14,8 +14,16 @@ import productImg9 from "../../../../public/assets/products/product-9.jpg";
 import productImg10 from "../../../../public/assets/products/product-10.jpg";
 import productImg11 from "../../../../public/assets/products/product-11.jpg";
 import AddToCartIcon from "./AddToCartIcon";
+import { useRouter } from "next/navigation";
 
-const ProductCard = ({ size }) => {
+const ProductCard = ({
+	size,
+	slug = "ecosavers-silicone-food-storage-bags",
+}) => {
+	const router = useRouter();
+
+	const onClick = () => router.push("product/" + slug);
+
 	const randomizedImg = Math.floor(Math.random() * 11) + 1;
 
 	const getRandomImg = () => {
@@ -49,7 +57,7 @@ const ProductCard = ({ size }) => {
 
 	if (size === "sm") {
 		return (
-			<CardContainer size={size}>
+			<CardContainer onClick={onClick} size={size}>
 				<CardImage size={size} src={getRandomImg()} />
 				<div className="flex flex-col gap-3 p-4 pt-0">
 					<h2 className="text-standard-dark text-base">
@@ -68,7 +76,7 @@ const ProductCard = ({ size }) => {
 	}
 
 	return (
-		<CardContainer size={size}>
+		<CardContainer onClick={onClick} size={size}>
 			<CardImage size={size} src={getRandomImg()} />
 			<div className="flex flex-col gap-3 p-4 pt-0">
 				<h2 className="text-standard-dark text-xl">
