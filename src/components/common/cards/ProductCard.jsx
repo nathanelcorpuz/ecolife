@@ -11,12 +11,9 @@ import productImg8 from "../../../../public/assets/products/product-8.jpg";
 import productImg9 from "../../../../public/assets/products/product-9.jpg";
 import productImg10 from "../../../../public/assets/products/product-10.jpg";
 import productImg11 from "../../../../public/assets/products/product-11.jpg";
-import addToCartIcon from "../../../../public/assets/add-to-cart-icon.png";
-import Image from "next/image";
-import addToCartStyles from "./addToCartIcon.module.css";
 import AddToCartIcon from "./AddToCartIcon";
 
-export default function ProductCard() {
+export default function ProductCard({ size }) {
 	const randomizedImg = Math.floor(Math.random() * 11) + 1;
 
 	const getRandomImg = () => {
@@ -49,8 +46,8 @@ export default function ProductCard() {
 	};
 
 	return (
-		<CardContainer>
-			<CardImage src={getRandomImg()} />
+		<CardContainer size={size}>
+			<CardImage size={size} src={getRandomImg()} />
 			<h2 className="text-standard-dark text-xl">
 				EcoSavers Silicone Food Storage Bags
 			</h2>
