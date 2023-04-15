@@ -49,7 +49,7 @@ const ProductTiles = () => {
 					<ProductCard key={product.id} size="sm" />
 				))}
 			</div>
-			<div className="w-[600px] flex">
+			<div className="w-[400px] flex justify-center gap-4">
 				<div className="w-[50px] h-[50px]">
 					<button
 						className={
