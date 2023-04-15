@@ -1,3 +1,4 @@
+import FooterCategories from "./FooterCategories";
 import FooterContact from "./FooterContact";
 import FooterQuickLinks from "./FooterQuickLinks";
 import FooterResources from "./FooterResources";
@@ -10,6 +11,7 @@ const Footer = () => {
 			<div className="flex justify-evenly self-stretch">
 				<FooterSocials />
 				<FooterQuickLinks />
+				<FooterCategories />
 				<FooterResources />
 				<FooterContact />
 			</div>

@@ -6,11 +6,11 @@ import ShopByCategory from "./shop-by-category/ShopByCategory";
 
 const Products = () => {
 	return (
-		<section className="flex flex-col">
+		<main className="flex flex-col">
 			<ShopByCategory />
 			<AllProducts />
 			<BestSellers />
-		</section>
+		</main>
 	);
 };
 
