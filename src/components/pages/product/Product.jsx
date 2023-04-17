@@ -5,10 +5,10 @@ import ProductImages from "./product-images/ProductImages";
 
 const Product = ({ data }) => {
 	return (
-		<main>
-			<ProductImages data={data} />
+		<section>
+			<ProductImages />
 			<ProductDetails data={data} />
-		</main>
+		</section>
 	);
 };
 

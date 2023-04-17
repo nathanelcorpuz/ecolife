@@ -15,7 +15,7 @@ const BlogInvite = () => {
 					sustainability
 				</p>
 			</div>
-			<div className="flex justify-center gap-40">
+			<div className="flex justify-center gap-20">
 				<BlogCard />
 				<BlogCard />
 				<BlogCard />
