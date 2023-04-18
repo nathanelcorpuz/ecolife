@@ -43,10 +43,6 @@ const getProduct = (slug) => {
 					uuid: "product-4",
 					url: "https://example.com",
 				},
-				{
-					uuid: "product-5",
-					url: "https://example.com",
-				},
 			],
 		};
 	}
