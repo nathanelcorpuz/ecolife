@@ -1,4 +1,9 @@
-export default function Button({ children, size = "sm", light = false }) {
+export default function Button({
+	children,
+	size = "sm",
+	light = false,
+	...props
+}) {
 	let variantClass;
 
 	if (light) {
@@ -25,6 +30,7 @@ export default function Button({ children, size = "sm", light = false }) {
         ${sizeClass}
 		${variantClass}
         rounded font-bold`}
+			{...props}
 		>
 			{children}
 		</button>
