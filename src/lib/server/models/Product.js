@@ -2,6 +2,11 @@ import mongoose from "mongoose";
 
 const { Schema, model, models } = mongoose;
 
+const imageSchema = new Schema({
+	url: { type: String, required: true },
+	uuid: { type: String, required: true },
+});
+
 const productSchema = new Schema({
 	type: {
 		type: String,
@@ -19,7 +24,7 @@ const productSchema = new Schema({
 	description: { type: String, required: true },
 	isActive: { type: Boolean, default: false },
 	isDeleted: { type: Boolean, default: false },
-	imageUrls: [String],
+	imageUrls: [imageSchema],
 	reviewIds: [{ type: Schema.Types.ObjectId, ref: "Review" }],
 	dateCreated: { type: Date, default: Date.now },
 });

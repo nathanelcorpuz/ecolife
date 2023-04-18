@@ -7,6 +7,8 @@ import productImg3 from "../../../../../public/assets/products/product-3.jpg";
 import productImg4 from "../../../../../public/assets/products/product-4.jpg";
 import productImg5 from "../../../../../public/assets/products/product-5.jpg";
 
+// save image ids in db
+
 const getProduct = (slug) => {
 	// sample query product by slug from db
 	if (slug === "ecosavers-silicone-food-storage-bags") {
@@ -24,7 +26,28 @@ const getProduct = (slug) => {
 					value: "Small",
 				},
 			],
-			imageIds: ["id1", "id2", "id3", "id4", "id5"],
+			images: [
+				{
+					uuid: "product-1",
+					url: "https://example.com",
+				},
+				{
+					uuid: "product-2",
+					url: "https://example.com",
+				},
+				{
+					uuid: "product-3",
+					url: "https://example.com",
+				},
+				{
+					uuid: "product-4",
+					url: "https://example.com",
+				},
+				{
+					uuid: "product-5",
+					url: "https://example.com",
+				},
+			],
 		};
 	}
 };

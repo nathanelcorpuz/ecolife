@@ -5,8 +5,9 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
-const ProductImages = ({ imageIds }) => {
+const ProductImages = ({ images }) => {
 	const params = useParams();
+	const [activeId, setActiveId] = useState(images[0].uuid);
 	// on thumbnail click, update preview image
 	// on preview image click, open image in modal
 	return (
@@ -14,16 +15,17 @@ const ProductImages = ({ imageIds }) => {
 			<h1>
 				<Link
 					className="underline"
-					href={`/product/${params.slug}/image/${imageIds[0]}`}
+					href={`/product/${params.slug}/image/${activeId}`}
 				>
-					Image preview
+					Image preview: {activeId}
 				</Link>
 			</h1>
 			<div>
-				{imageIds.map((id) => (
-					<Link key={id} href={`/product/${params.slug}/image/${id}`}>
-						Image {id}
-					</Link>
+				{images.map(({ uuid, url }) => (
+					<Button key={uuid} onClick={() => setActiveId(uuid)}>
+						{/* fetch image via id from uploadcare */}
+						Image: {uuid}
+					</Button>
 				))}
 			</div>
 		</section>
