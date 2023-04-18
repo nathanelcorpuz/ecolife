@@ -7,9 +7,15 @@ const ProductImages = ({ data }) => {
 	const params = useParams();
 	return (
 		<section>
-			<div>Image preview</div>
+			<div>
+				<Link
+					className="underline"
+					href={`product/${params.slug}/image/sampleImageId123`}
+				>
+					Image preview
+				</Link>
+			</div>
 			<div>Clickable Thumbnails</div>
-			<Link href={`product/${params.slug}/sample`}>To image</Link>
 		</section>
 	);
 };
