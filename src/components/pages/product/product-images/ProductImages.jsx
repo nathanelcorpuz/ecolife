@@ -10,7 +10,7 @@ const ProductImages = ({ data }) => {
 			<div>
 				<Link
 					className="underline"
-					href={`product/${params.slug}/image/sampleImageId123`}
+					href={`/product/${params.slug}/image/sampleDataId`}
 				>
 					Image preview
 				</Link>

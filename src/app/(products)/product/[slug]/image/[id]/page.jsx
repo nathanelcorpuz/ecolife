@@ -1,6 +1,10 @@
 import ProductImage from "@/components/pages/product/product-images/ProductImage";
 
-export default function Page({ params }) {
-	const { id } = params;
-	return <ProductImage />;
+export default function PhotoPage() {
+	return (
+		<div>
+			<p>NO modal</p>
+			<ProductImage />
+		</div>
+	);
 }

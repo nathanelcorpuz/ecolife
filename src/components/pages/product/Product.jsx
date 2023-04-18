@@ -6,6 +6,7 @@ import ProductImages from "./product-images/ProductImages";
 const Product = ({ data }) => {
 	return (
 		<section>
+			<ProductImages />
 			<ProductDetails data={data} />
 		</section>
 	);
