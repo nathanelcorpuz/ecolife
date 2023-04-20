@@ -1,6 +1,5 @@
 "use client";
-
-import Button from "@/components/common/buttons/Button";
+import Button2 from "@/components/common/buttons/Button2";
 import Image from "next/image";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
@@ -54,9 +53,11 @@ const ProductImage = ({ isModal, id }) => {
 						height={400}
 						alt="test"
 					/>
-					<Button onClick={() => setIsExiting(true)}>
-						Return to product (router.back)
-					</Button>
+					<div className="p-5">
+						<Button2 onClick={() => setIsExiting(true)}>
+							Back to product
+						</Button2>
+					</div>
 				</div>
 			</div>
 		);
@@ -64,7 +65,7 @@ const ProductImage = ({ isModal, id }) => {
 	return (
 		<div
 			ref={ref}
-			className="fixed top-0 right-0 bottom-0 left-0 bg-standard-dark-100 grid place-content-center z-10 transition-all opacity-50"
+			className="fixed top-0 right-0 bottom-0 left-0 bg-standard-dark-100 grid place-content-center z-10 transition-all opacity-100"
 		>
 			<div className="bg-standard-light">
 				<Image
@@ -73,9 +74,9 @@ const ProductImage = ({ isModal, id }) => {
 					height={400}
 					alt="test"
 				/>
-				<Button onClick={() => setIsExiting(true)}>
-					Return to product (router.push)
-				</Button>
+				<div className="p-5">
+					<Button2 onClick={() => setIsExiting(true)}>Back to product</Button2>
+				</div>
 			</div>
 		</div>
 	);
