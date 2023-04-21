@@ -41,6 +41,12 @@ module.exports = {
 				200: "#1f824e",
 				300: "#1a6b40",
 			},
+			"accent-light-green": {
+				DEFAULT: "#E8F5E9",
+				100: "#E8F5E9",
+				200: "#C8E6C9",
+				300: "#A5D6A7",
+			},
 			"accent-light": {
 				DEFAULT: "#FFF7EB",
 				100: "#FFF7EB",
@@ -50,7 +56,5 @@ module.exports = {
 		},
 		extend: {},
 	},
-	plugins: [
-		require("@tailwindcss/forms"),
-	],
+	plugins: [require("@tailwindcss/forms")],
 };

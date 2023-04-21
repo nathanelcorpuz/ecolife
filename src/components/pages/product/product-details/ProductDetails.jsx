@@ -9,7 +9,7 @@ const roundPrice = (price) => {
 
 export default function ProductDetails({ data, choices, setChoices }) {
 	return (
-		<section className="flex flex-col gap-6">
+		<section className="flex flex-col gap-8">
 			<h1 className="text-5xl font-bold">{data.title}</h1>
 			<div className="flex items-center gap-4">
 				<Rating rating={data.rating} isLight={false} />
@@ -39,6 +39,10 @@ export default function ProductDetails({ data, choices, setChoices }) {
 				setChoices={setChoices}
 			/>
 			<p>{data.description}</p>
+
+			<button className="bg-accent-balanced text-standard-light font-bold text-3xl py-8 hover:scale-[1.02] transition-all rounded">
+				Add to cart
+			</button>
 		</section>
 	);
 }

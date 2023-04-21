@@ -11,6 +11,7 @@ const reviewSchema = new Schema({
 		ref: "User",
 	},
 	rating: { type: Number, required: true },
+	name: { type: String, default: "" },
 	date: { type: Date, default: Date.now },
 	comment: { type: String, required: true },
 	isDeleted: { type: Boolean, default: false },

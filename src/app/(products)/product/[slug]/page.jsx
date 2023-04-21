@@ -69,6 +69,21 @@ const getProduct = (slug) => {
 					url: "https://example.com",
 				},
 			],
+			reviews: [
+				{
+					name: "Nat C.",
+					rating: 5,
+					comment: "Great product!",
+					dateCreated: "January 2, 1970",
+				},
+				{
+					name: "Nat C.",
+					rating: 4,
+					comment:
+						"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse venenatis dolor sed libero.",
+					dateCreated: "January 1, 1970",
+				},
+			],
 		};
 	}
 };

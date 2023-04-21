@@ -43,9 +43,6 @@ const ProductImages = ({ images }) => {
 					</div>
 				))}
 			</div>
-			<button className="bg-accent-balanced text-standard-light font-bold text-3xl py-8 hover:scale-[1.02] transition-all rounded">
-				Add to cart
-			</button>
 		</section>
 	);
 };

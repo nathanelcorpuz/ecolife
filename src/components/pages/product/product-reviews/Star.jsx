@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 
-const light = "#FFF7EB";
+const light = "#A5D6A7";
 const dark = "#12370E";
 
 export default function Star({ fillPercentage, isLight }) {

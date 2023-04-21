@@ -9,23 +9,27 @@ export default function ProductChoices({
 	choices,
 	setChoices,
 }) {
-	return fetchedChoices.map((choice) => {
-		const setValue = (value) => {
-			setChoices((prev) => {
-				return {
-					...prev,
-					[choice.title]: value,
+	return (
+		<div className="flex gap-8 flex-wrap">
+			{fetchedChoices.map((choice) => {
+				const setValue = (value) => {
+					setChoices((prev) => {
+						return {
+							...prev,
+							[choice.title]: value,
+						};
+					});
 				};
-			});
-		};
-		return (
-			<Dropdown
-				key={choice.title}
-				options={choice.options}
-				title={choice.title}
-				value={choices[choice.title]}
-				setValue={setValue}
-			/>
-		);
-	});
+				return (
+					<Dropdown
+						key={choice.title}
+						options={choice.options}
+						title={choice.title}
+						value={choices[choice.title]}
+						setValue={setValue}
+					/>
+				);
+			})}
+		</div>
+	);
 }
