@@ -1,8 +1,7 @@
 "use client";
 
-import Dropdown from "@/components/common/inputs/dropdown/Dropdown";
-import { useState } from "react";
 import ProductChoices from "./ProductChoices";
+import Rating from "../product-reviews/Rating";
 
 const roundPrice = (price) => {
 	return (Math.round(price * 100) / 100).toFixed(2);
@@ -12,6 +11,15 @@ export default function ProductDetails({ data, choices, setChoices }) {
 	return (
 		<section className="flex flex-col gap-6">
 			<h1 className="text-5xl font-bold">{data.title}</h1>
+			<div className="flex items-center gap-4">
+				<Rating rating={data.rating} isLight={false} />
+				<a
+					className="italic font-bold underline text-accent-balanced hover:text-accent-dark transition-all"
+					href="#reviews"
+				>
+					{data.numOfReviews} reviews
+				</a>
+			</div>
 			<div className="flex items-center gap-4">
 				<div className="flex items-center gap-1">
 					<p className="text-3xl text-accent-balanced">
