@@ -10,6 +10,7 @@ const defaultLabelProps = {
 };
 
 export default function Checkbox({
+	className = "",
 	inputProps = defaultInputProps,
 	labelProps = defaultLabelProps,
 	labelText = "Default label text",
@@ -17,15 +18,20 @@ export default function Checkbox({
 	return (
 		<div className="flex gap-3 items-center">
 			<input
-				className="
+				className={`
 				form-checkbox rounded text-accent-dark-100
 		 		cursor-pointer
 				transition-all
 				p-2
-				"
+				${className}`}
 				{...inputProps}
 			/>
-			<label className="leading-none" {...labelProps}> {labelText}</label>
+			{labelText ? (
+				<label className="leading-none" {...labelProps}>
+					{" "}
+					{labelText}
+				</label>
+			) : null}
 		</div>
 	);
 }

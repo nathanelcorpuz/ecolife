@@ -10,7 +10,7 @@ const getCart = async () => {
 					data: [
 						{
 							id: 1,
-							name: "Product 1",
+							title: "Product 1",
 							price: 100,
 							quantity: 1,
 							choices: [
@@ -26,7 +26,7 @@ const getCart = async () => {
 						},
 						{
 							id: 2,
-							name: "Product 2",
+							title: "Product 2",
 							price: 200,
 							quantity: 2,
 							choices: [
@@ -49,5 +49,5 @@ const getCart = async () => {
 
 export default async function Page() {
 	const { data } = await getCart();
-	return <Cart data={data} />;
+	return <Cart products={data} />;
 }
