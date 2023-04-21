@@ -25,14 +25,14 @@ const defaultOptions = [
 const Dropdown = ({
 	title = "Default title",
 	options = defaultOptions,
-	dropdownChange,
+	setValue,
 	value,
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
 
 	const handleOptionClick = (value) => {
-		dropdownChange(value, title);
+		setValue(value);
 		setIsOpen(false);
 	};
 
@@ -56,9 +56,9 @@ const Dropdown = ({
 			onClick={() => setIsOpen(!isOpen)}
 			ref={dropdownRef}
 		>
-			<p>{title}</p>
-			<div className="flex justify-between p-3 rounded border border-standard-light-300 cursor-pointer">
-				<p className={!value ? "text-standard-balanced" : ""}>
+			<p className="text-standard-balanced">{title}</p>
+			<div className="flex justify-between p-3 rounded border border-standard-light-200 cursor-pointer">
+				<p className={!value ? "text-standard-balanced" : "font-bold"}>
 					{!value
 						? "Select option"
 						: options.find((option) => option.value === value).label}

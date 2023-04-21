@@ -48,9 +48,9 @@ const ProductImage = ({ isModal, id }) => {
 			>
 				<div className="bg-standard-light">
 					<Image
-						src="https://placehold.co/600x400.webp"
-						width={600}
-						height={400}
+						src="https://placehold.co/1920x1080.webp"
+						width={1200}
+						height={600}
 						alt="test"
 					/>
 					<div className="p-5">

@@ -15,7 +15,7 @@ const ProductImages = ({ images }) => {
 	return (
 		<section className="flex flex-col gap-2">
 			<div
-				className="w-[700px] h-[500px] relative overflow-hidden cursor-pointer transition-all hover:scale-[1.03]"
+				className="w-[700px] h-[500px] relative overflow-hidden cursor-pointer transition-all hover:scale-[1.015]"
 				onClick={() => router.push(`/product/${params.slug}/image/${activeId}`)}
 			>
 				<Image
@@ -43,6 +43,9 @@ const ProductImages = ({ images }) => {
 					</div>
 				))}
 			</div>
+			<button className="bg-accent-balanced text-standard-light font-bold text-3xl py-8 hover:scale-[1.02] transition-all rounded">
+				Add to cart
+			</button>
 		</section>
 	);
 };
