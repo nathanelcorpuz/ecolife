@@ -1,4 +1,4 @@
-import Option from "@/lib/server/models/Option";
+import Option from "@/lib/server/models/Choice";
 import Product from "@/lib/server/models/Product";
 
 export default async function (req, res) {

@@ -3,9 +3,9 @@ import mongoose from "mongoose";
 const { Schema, model, models } = mongoose;
 
 const optionsSchema = new Schema({
-	optionId: {
+	choiceId: {
 		type: Schema.Types.ObjectId,
-		ref: "Option",
+		ref: "Choice",
 		required: true,
 	},
 	title: {

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const { Schema, model, models } = mongoose;
 
-const optionSchema = new Schema({
+const choiceSchema = new Schema({
 	title: String,
 	value: String,
 });
@@ -18,7 +18,7 @@ const categorySchema = new Schema({
 
 const productSchema = new Schema({
 	id: Schema.Types.ObjectId,
-	options: [optionSchema],
+	choices: [choiceSchema],
 	category: categorySchema,
 	quantity: Number,
 	title: String,

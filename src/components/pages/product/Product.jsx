@@ -9,7 +9,7 @@ const Product = ({ data }) => {
 	console.log(pathname);
 	return (
 		<section className="py-20 ">
-			<div className="m-w-5xl flex justify-center">
+			<div className="m-w-5xl flex justify-center gap-12">
 				<ProductImages images={data.images} />
 				<ProductDetails data={data} />
 			</div>

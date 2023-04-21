@@ -13,7 +13,7 @@ const productSchema = new Schema({
 		enum: ["normal", "featured", "bestseller"],
 		default: "normal",
 	},
-	optionIds: [{ type: Schema.Types.ObjectId, ref: "Option" }],
+	choiceIds: [{ type: Schema.Types.ObjectId, ref: "Choice" }],
 	categoryIds: [{ type: Schema.Types.ObjectId, ref: "Category" }],
 	subCategoryIds: [{ type: Schema.Types.ObjectId, ref: "SubCategory" }],
 	title: { type: String, required: true },

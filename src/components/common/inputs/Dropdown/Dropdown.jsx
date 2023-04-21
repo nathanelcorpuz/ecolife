@@ -23,16 +23,16 @@ const defaultOptions = [
 ];
 
 const Dropdown = ({
-	label = "Default label",
+	title = "Default title",
 	options = defaultOptions,
-	selectedOption,
-	setSelectedOption,
+	dropdownChange,
+	value,
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
 
 	const handleOptionClick = (value) => {
-		setSelectedOption(value);
+		dropdownChange(value, title);
 		setIsOpen(false);
 	};
 
@@ -56,17 +56,17 @@ const Dropdown = ({
 			onClick={() => setIsOpen(!isOpen)}
 			ref={dropdownRef}
 		>
-			<p>{label}</p>
+			<p>{title}</p>
 			<div className="flex justify-between p-3 rounded border border-standard-light-300 cursor-pointer">
-				<p className={!selectedOption ? "text-standard-balanced" : ""}>
-					{!selectedOption
+				<p className={!value ? "text-standard-balanced" : ""}>
+					{!value
 						? "Select option"
-						: options.find((option) => option.value === selectedOption).label}
+						: options.find((option) => option.value === value).label}
 				</p>
 				<DropdownIcon />
 			</div>
 			<ul
-				className="rounded px-2 py-4 absolute top-[110%] w-full border border-standard-light-300"
+				className="rounded px-2 py-4 absolute top-[110%] w-full border border-standard-light-300 z-10 bg-standard-light"
 				style={{ display: isOpen ? "block" : "none" }}
 			>
 				{options.map((option) => (

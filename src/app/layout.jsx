@@ -22,7 +22,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={lato.variable}>
-			<body>
+			<body className="bg-standard-light">
 				<Header />
 				<Announcement />
 				{children}

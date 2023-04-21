@@ -14,16 +14,44 @@ const getProduct = (slug) => {
 	if (slug === "ecosavers-silicone-food-storage-bags") {
 		return {
 			title: "EcoSavers Silicone Food Storage Bags",
+			price: 500,
+			inStock: true,
 			description:
 				"Introducing our EcoSavers Silicone Food Storage Bags - the ultimate solution for eco-friendly food storage. Replace single-use plastic bags with these durable, reusable, and leak-proof silicone bags. Ideal for storing snacks, leftovers, and meal prep ingredients, these bags are a must-have for a sustainable kitchen.",
-			options: [
+			choices: [
 				{
 					title: "Color",
-					value: "Blue",
+					options: [
+						{
+							value: "blue",
+							label: "Blue",
+						},
+						{
+							value: "green",
+							label: "Green",
+						},
+						{
+							value: "red",
+							label: "Red",
+						},
+					],
 				},
 				{
 					title: "Size",
-					value: "Small",
+					options: [
+						{
+							value: "small",
+							label: "Small",
+						},
+						{
+							value: "medium",
+							label: "Medium",
+						},
+						{
+							value: "large",
+							label: "Large",
+						},
+					],
 				},
 			],
 			images: [
