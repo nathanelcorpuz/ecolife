@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import Logo from "../../Logo";
 import HeaderLink from "./HeaderLink";
 
@@ -36,7 +37,7 @@ const Header = () => {
 					</li>
 					<li>
 						<button className="px-4 py-2 text-lg bg-accent-balanced text-accent-light font-bold rounded ">
-							Cart
+							<Link href="/cart">Cart</Link>
 						</button>
 					</li>
 				</ul>
