@@ -24,9 +24,11 @@ const defaultOptions = [
 
 const Dropdown = ({
 	title = "Default title",
+	placeholder = "Select option",
 	options = defaultOptions,
 	setValue,
 	value,
+	width = "w-80",
 }) => {
 	const [isOpen, setIsOpen] = useState(false);
 	const dropdownRef = useRef(null);
@@ -52,15 +54,15 @@ const Dropdown = ({
 
 	return (
 		<div
-			className="flex flex-col gap-1 w-80 relative"
+			className={`flex flex-col gap-1 relative ${width}`}
 			onClick={() => setIsOpen(!isOpen)}
 			ref={dropdownRef}
 		>
-			<p className="text-standard-balanced">{title}</p>
+			<p className="text-standard-dark-300">{title}</p>
 			<div className="flex justify-between p-3 rounded border border-standard-light-200 cursor-pointer">
 				<p className={!value ? "text-standard-balanced" : "font-bold"}>
 					{!value
-						? "Select option"
+						? placeholder
 						: options.find((option) => option.value === value).label}
 				</p>
 				<DropdownIcon />

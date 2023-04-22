@@ -15,16 +15,16 @@ const Header = () => {
 			<nav className="w-[40%]">
 				<ul className="flex gap-8 items-center justify-center">
 					<li>
-						<HeaderLink href="products">Products</HeaderLink>
+						<HeaderLink href="/products">Products</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="about">About</HeaderLink>
+						<HeaderLink href="/about">About</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="contact">Contact</HeaderLink>
+						<HeaderLink href="/contact">Contact</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="blog">Blog</HeaderLink>
+						<HeaderLink href="/blog">Blog</HeaderLink>
 					</li>
 					<li>
 						<HeaderLink href="">Login</HeaderLink>

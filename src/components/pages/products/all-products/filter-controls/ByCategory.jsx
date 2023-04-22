@@ -15,7 +15,7 @@ const ByCategory = () => {
 						value: "kitchen",
 					}}
 					labelProps={{ htmlFor: "kitchen" }}
-					labelText="Kitchen"
+					label="Kitchen"
 				/>
 				<Checkbox
 					inputProps={{
@@ -25,7 +25,7 @@ const ByCategory = () => {
 						value: "personalCare",
 					}}
 					labelProps={{ htmlFor: "personalCare" }}
-					labelText="Personal Care"
+					label="Personal Care"
 				/>
 				<Checkbox
 					inputProps={{
@@ -35,7 +35,7 @@ const ByCategory = () => {
 						value: "fashion",
 					}}
 					labelProps={{ htmlFor: "fashion" }}
-					labelText="Fashion"
+					label="Fashion"
 				/>
 			</div>
 		</section>

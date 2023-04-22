@@ -24,6 +24,8 @@ export default function CheckoutProvider({ children }) {
 		expirationDate: "",
 		securityCode: "",
 		billingAddress: "",
+		subtotal: "",
+		billingAddressChecked: true,
 	});
 	return (
 		<CheckoutContext.Provider

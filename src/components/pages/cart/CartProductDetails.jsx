@@ -9,10 +9,7 @@ import ChoiceDisplay from "@/components/common/ChoiceDisplay";
 export default function CartProductDetails({ product }) {
 	return (
 		<div className="flex gap-24">
-			<Checkbox
-				labelText=""
-				className="border-accent-balanced p-3 hover:bg-standard-light-200"
-			/>
+			<Checkbox label="" />
 			<div className="flex gap-4">
 				<Image src={img} width={80} height={20} />
 				<div className="flex flex-col items-start">

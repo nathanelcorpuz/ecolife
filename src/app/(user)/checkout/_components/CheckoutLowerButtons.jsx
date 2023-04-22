@@ -37,7 +37,9 @@ export default function CheckoutLowerButtons() {
 				{isOnOrderSummaryPage && "Back to shipping info"}
 				{isOnPaymentInfoPage && "Back to order summary"}
 			</Button2>
-			<Button onClick={handleConfirm}>Confirm</Button>
+			<Button onClick={handleConfirm}>
+				{isOnPaymentInfoPage ? "Submit order" : "Next"}
+			</Button>
 		</div>
 	);
 }

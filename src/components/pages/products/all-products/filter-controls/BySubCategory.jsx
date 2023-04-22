@@ -16,7 +16,7 @@ const BySubCategory = () => {
 						value: "reusableContainers",
 					}}
 					labelProps={{ htmlFor: "reusableContainers" }}
-					labelText="Reusable Containers"
+					label="Reusable Containers"
 				/>
 				<Checkbox
 					inputProps={{
@@ -26,7 +26,7 @@ const BySubCategory = () => {
 						value: "ecoFriendlyCleaningSupplies",
 					}}
 					labelProps={{ htmlFor: "ecoFriendlyCleaningSupplies" }}
-					labelText="Eco-friendly Cleaning Supplies"
+					label="Eco-friendly Cleaning Supplies"
 				/>
 			</div>
 			<div className="flex flex-col gap-4">
@@ -39,7 +39,7 @@ const BySubCategory = () => {
 						value: "naturalSkinCare",
 					}}
 					labelProps={{ htmlFor: "naturalSkinCare" }}
-					labelText="Natural Skincare"
+					label="Natural Skincare"
 				/>
 				<Checkbox
 					inputProps={{
@@ -49,7 +49,7 @@ const BySubCategory = () => {
 						value: "sustainableDentalCare",
 					}}
 					labelProps={{ htmlFor: "sustainableDentalCare" }}
-					labelText="Sustainable Dental Care"
+					label="Sustainable Dental Care"
 				/>
 			</div>
 			<div className="flex flex-col gap-4">
@@ -62,7 +62,7 @@ const BySubCategory = () => {
 						value: "sustainableClothing",
 					}}
 					labelProps={{ htmlFor: "sustainableClothing" }}
-					labelText="Sustainable Clothing"
+					label="Sustainable Clothing"
 				/>
 				<Checkbox
 					inputProps={{
@@ -72,7 +72,7 @@ const BySubCategory = () => {
 						value: "ethicalAccessories",
 					}}
 					labelProps={{ htmlFor: "ethicalAccessories" }}
-					labelText="Ethical Accessories"
+					label="Ethical Accessories"
 				/>
 			</div>
 		</section>

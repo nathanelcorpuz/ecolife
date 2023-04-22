@@ -13,23 +13,24 @@ export default function Checkbox({
 	className = "",
 	inputProps = defaultInputProps,
 	labelProps = defaultLabelProps,
-	labelText = "Default label text",
+	label = "Default label text",
 }) {
 	return (
 		<div className="flex gap-3 items-center">
 			<input
+				type="checkbox"
 				className={`
 				form-checkbox rounded text-accent-dark-100
 		 		cursor-pointer
 				transition-all
-				p-2
+				border-accent-balanced p-3 hover:bg-standard-light-200
 				${className}`}
 				{...inputProps}
 			/>
-			{labelText ? (
+			{label ? (
 				<label className="leading-none" {...labelProps}>
 					{" "}
-					{labelText}
+					{label}
 				</label>
 			) : null}
 		</div>
