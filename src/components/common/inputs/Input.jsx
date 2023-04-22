@@ -13,6 +13,7 @@ const Input = ({ label = "Default label", labelLight, ...inputProps }) => {
 			<input
 				type="text"
 				className="rounded border-standard-light-300 px-3 py-2 focus:border-standard-light-300 focus:ring-0"
+				placeholder={label}
 				{...inputProps}
 			/>
 		</div>

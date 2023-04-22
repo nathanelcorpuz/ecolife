@@ -59,7 +59,7 @@ export default function Cart({ products }) {
 						<p className="text-4xl font-bold text-accent-balanced">₱10,000</p>
 					</div>
 					<Button>
-						<Link className="p-2 text-2xl block" href="/checkout">
+						<Link className="p-2 text-2xl block" href="/checkout/shipping-information">
 							Proceed to checkout
 						</Link>
 					</Button>
