@@ -2,6 +2,7 @@ export default function Button({
 	children,
 	size = "sm",
 	light = false,
+	className = "",
 	...props
 }) {
 	let variantClass;
@@ -28,8 +29,10 @@ export default function Button({
 		<button
 			className={`
         ${sizeClass}
-		${variantClass}
-        rounded font-bold`}
+				${variantClass}
+				${className}
+        rounded font-bold
+				`}
 			{...props}
 		>
 			{children}

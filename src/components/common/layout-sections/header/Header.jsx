@@ -27,10 +27,10 @@ const Header = () => {
 						<HeaderLink href="/blog">Blog</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">Login</HeaderLink>
+						<HeaderLink href="/login">Login</HeaderLink>
 					</li>
 					<li>
-						<HeaderLink href="">Register</HeaderLink>
+						<HeaderLink href="/register">Register</HeaderLink>
 					</li>
 				</ul>
 			</nav>
