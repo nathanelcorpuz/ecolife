@@ -10,7 +10,5 @@ async function getProducts() {
 export default async function () {
 	const featuredProducts = await getProducts();
 
-	console.log("featuredProducts");
-	console.log(featuredProducts);
 	return <Home />;
 }

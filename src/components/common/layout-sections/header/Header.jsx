@@ -7,12 +7,13 @@ import HeaderLink from "./HeaderLink";
 const Header = () => {
 	return (
 		<header className="flex justify-center gap-48 p-5 items-center bg-accent-light">
-			<Logo />
-			<nav>
-				<ul className="flex gap-8 items-center">
-					<li>
-						<HeaderLink href="/">Home</HeaderLink>
-					</li>
+			<div className="w-[30%] flex justify-end">
+				<Link href="/">
+					<Logo />
+				</Link>
+			</div>
+			<nav className="w-[40%]">
+				<ul className="flex gap-8 items-center justify-center">
 					<li>
 						<HeaderLink href="products">Products</HeaderLink>
 					</li>
@@ -25,18 +26,18 @@ const Header = () => {
 					<li>
 						<HeaderLink href="blog">Blog</HeaderLink>
 					</li>
-				</ul>
-			</nav>
-			<nav>
-				<ul className="flex gap-8 items-center">
 					<li>
 						<HeaderLink href="">Login</HeaderLink>
 					</li>
 					<li>
 						<HeaderLink href="">Register</HeaderLink>
 					</li>
+				</ul>
+			</nav>
+			<nav className="w-[30%]">
+				<ul className="flex gap-8 justify-start items-center">
 					<li>
-						<button className="px-4 py-2 text-lg bg-accent-balanced text-accent-light font-bold rounded ">
+						<button className="px-4 py-2 text-lg bg-accent-balanced text-accent-light font-bold rounded hover:bg-accent-balanced-300 transition-all">
 							<Link href="/cart">Cart</Link>
 						</button>
 					</li>

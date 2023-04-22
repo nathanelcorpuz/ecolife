@@ -1,7 +1,7 @@
 import Image from "next/image";
 import CustomButton from "../buttons/Button";
 import CustomButton2 from "../buttons/Button2";
-import RightArrowIcon from "./RightArrowIcon";
+import RightArrowIcon from "../icons/RightArrowIcon";
 import defaultImg from "../../../../public/assets/products/product-1.jpg";
 
 export default function HeroLayout2({
