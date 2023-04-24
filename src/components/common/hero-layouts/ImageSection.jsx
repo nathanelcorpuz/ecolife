@@ -14,23 +14,37 @@ const ImageSection = ({
 	src,
 	alt,
 	isMirrored = false,
+	imagePosition,
 }) => {
+	const noTextContent = textContent === "";
+	const noButtons = mainCTAText === "" && secondaryCTAText === "";
 	return (
-		<div className="flex flex-row items-center justify-center w-screen gap-52">
-			<div className={`flex flex-col gap-7 ${isMirrored && "order-1"}`}>
+		<div className="flex flex-row items-center justify-center w-screen gap-12">
+			<div
+				className={`flex flex-col gap-7 w-[800px] ${isMirrored && "order-1"}`}
+			>
 				<h2 className="text-3xl font-bold text-accent-dark">{heading2}</h2>
-				<p className="text-xl text-standard-dark">{subtitle}</p>
-				<p>{textContent}</p>
-				<div className="flex gap-5 items-center">
-					<CustomButton size="md">{mainCTAText}</CustomButton>
-					<div className="flex items-center gap-2">
-						<CustomButton2>{secondaryCTAText}</CustomButton2>
-						<RightArrowIcon />
+				<p className="text-xl text-standard-dark leading-9">{subtitle}</p>
+				{!noTextContent && (
+					<p className="text-standard-balanced leading-7">{textContent}</p>
+				)}
+				{!noButtons && (
+					<div className="flex gap-5 items-center">
+						<CustomButton size="md">{mainCTAText}</CustomButton>
+						<div className="flex items-center gap-2">
+							<CustomButton2>{secondaryCTAText}</CustomButton2>
+							<RightArrowIcon />
+						</div>
 					</div>
-				</div>
+				)}
 			</div>
-			<div className="w-5/12 h-[32rem] relative">
-				<Image src={src} fill className="object-cover object-top" alt={alt} />
+			<div className="w-[800px] h-[32rem] relative">
+				<Image
+					src={src}
+					fill
+					className={`object-cover object-${imagePosition}`}
+					alt={alt}
+				/>
 			</div>
 		</div>
 	);

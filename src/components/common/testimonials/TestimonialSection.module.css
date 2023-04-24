@@ -1,0 +1,9 @@
+.wrapper {
+	position: relative;
+	width: 150px;
+	height: 150px;
+}
+
+.wrapper img {
+	clip-path: circle(40% at 50% 50%);
+}

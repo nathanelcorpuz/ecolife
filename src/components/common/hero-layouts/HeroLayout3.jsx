@@ -41,11 +41,14 @@ const sampleImageSections = [
 const HeroLayout3 = ({
 	heading1 = "Hero layout 3 heading1",
 	imageSections = sampleImageSections,
+	wrapperClassName,
 }) => {
 	const [activeSection, setActiveSection] = useState(0);
 	return (
-		<section className="flex flex-col gap-10 items-center relative">
-			<h1 className="text-5xl font-bold text-accent-dark">{heading1}</h1>
+		<section
+			className={`flex flex-col gap-24 items-center relative ${wrapperClassName}`}
+		>
+			<h1 className="text-7xl font-bold text-accent-dark">{heading1}</h1>
 			<div
 				className={`transition-all flex ${
 					activeSection === 0

@@ -11,22 +11,26 @@ export default function HeroLayout2({
 	subtitle = "Subtitle for hero layout 2",
 	mainCTAText = "Main CTA",
 	secondaryCTAText = "Secondary CTA",
+	wrapperClassName,
+	noButtons = false,
 }) {
 	return (
-		<section className="flex items-center justify-between pe-48">
-			<div className="w-8/12 h-96 relative">
+		<section className={`flex items-center gap-28 ${wrapperClassName}`}>
+			<div className="w-[900px] h-[550px] relative">
 				<Image src={src} fill className="object-cover object-top" alt={alt} />
 			</div>
-			<div className="flex flex-col gap-7">
-				<h1 className="text-5xl font-bold text-accent-dark">{title}</h1>
-				<p className="text-2xl text-standard-dark">{subtitle}</p>
-				<div className="flex gap-5 items-center">
-					<CustomButton size="md">{mainCTAText}</CustomButton>
-					<div className="flex items-center gap-2">
-						<CustomButton2>{secondaryCTAText}</CustomButton2>
-						<RightArrowIcon />
+			<div className="flex flex-col gap-7 max-w-[600px]">
+				<h1 className="text-7xl font-bold text-accent-dark">{title}</h1>
+				<p className="text-2xl text-standard-dark leading-10">{subtitle}</p>
+				{noButtons ? null : (
+					<div className="flex gap-5 items-center">
+						<CustomButton size="md">{mainCTAText}</CustomButton>
+						<div className="flex items-center gap-2">
+							<CustomButton2>{secondaryCTAText}</CustomButton2>
+							<RightArrowIcon />
+						</div>
 					</div>
-				</div>
+				)}
 			</div>
 		</section>
 	);

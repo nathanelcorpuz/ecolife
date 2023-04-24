@@ -2,7 +2,10 @@ import styles from "./Carousel.module.css";
 import NextIcon from "./NextIcon";
 import PrevIcon from "./PrevIcon";
 
-export default function CarouselControls({ activeSection, setActiveSection }) {
+export default function CarouselControls({
+	activeSection,
+	setActiveSection = () => {},
+}) {
 	const prevClick = () => {
 		if (activeSection === 0) return;
 		setActiveSection((prev) => prev - 1);
