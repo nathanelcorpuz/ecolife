@@ -23,12 +23,12 @@ export default function Blog() {
 			<section className="py-36 flex flex-col gap-16 justify-start">
 				<h1 className="text-5xl font-bold">Popular</h1>
 				<div className="flex flex-wrap gap-16">
-					<ArticlePreview width="350px" height="250px" />
-					<ArticlePreview width="350px" height="250px" />
-					<ArticlePreview width="350px" height="250px" />
-					<ArticlePreview width="350px" height="250px" />
-					<ArticlePreview width="350px" height="250px" />
-					<ArticlePreview width="350px" height="250px" />
+					<ArticlePreview isSmall />
+					<ArticlePreview isSmall />
+					<ArticlePreview isSmall />
+					<ArticlePreview isSmall />
+					<ArticlePreview isSmall />
+					<ArticlePreview isSmall />
 				</div>
 				<div className="w-[250px]">
 					<Button size="lg">Load more</Button>

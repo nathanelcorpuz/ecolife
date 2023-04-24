@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import img from "../../../../../public/assets/blog/blog-1.jpg";
 import Image from "next/image";
 
@@ -11,8 +14,15 @@ const defaultArticle = {
 };
 
 export default function SmallArticlePreview({ article = defaultArticle }) {
+	const router = useRouter();
+
+	const onClick = () => router.push("/blog/test-article");
+
 	return (
-		<article className="flex gap-5 items-center">
+		<article
+			className="flex gap-5 items-center cursor-pointer"
+			onClick={onClick}
+		>
 			<div className="relative w-[100px] h-[60px]">
 				<Image
 					src={img}
