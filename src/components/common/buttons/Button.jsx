@@ -3,8 +3,15 @@ export default function Button({
 	size = "sm",
 	light = false,
 	className = "",
+	disabled = false,
 	...props
 }) {
+	let disabledClass;
+
+	if (disabled) {
+		disabledClass = "opacity-50 cursor-not-allowed";
+	}
+
 	let variantClass;
 
 	if (light) {
@@ -31,8 +38,10 @@ export default function Button({
         ${sizeClass}
 				${variantClass}
 				${className}
+				${disabledClass}
         rounded font-bold
 				`}
+			disabled={disabled}
 			{...props}
 		>
 			{children}

@@ -6,6 +6,7 @@ const profileInfoSchema = new Schema({
 	userId: {
 		type: Schema.Types.ObjectId,
 		ref: "User",
+		required: true,
 	},
 	firstName: { type: String, default: "" },
 	lastName: { type: String, default: "" },

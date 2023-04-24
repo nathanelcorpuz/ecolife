@@ -1,7 +1,11 @@
 import User from "@/lib/server/models/User";
+import Cart from "@/lib/server/models/Cart";
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import connectMongo from "@/lib/server/services/connectMongo";
+import ProfileInfo from "@/lib/server/models/ProfileInfo";
+import ShippingInfo from "@/lib/server/models/ShippingInfo";
+import sendVerificationEmail from "./_utils/sendVerificationEmail";
 
 const SALT = +process.env.SALT;
 
@@ -10,15 +14,27 @@ export async function POST(request) {
 
 	await connectMongo();
 
-	// encrypt password
-	// save in db
-	// send verification email
-
 	const hashedPassword = await bcrypt.hash(password, SALT);
 
 	const user = new User({ email, password: hashedPassword });
 
-	await user.save();
+	const userId = user._id;
 
-	return NextResponse.json({ message: "success" });
+	const cart = new Cart({ userId });
+
+	const profileInfo = new ProfileInfo({ email, userId });
+
+	const shippingInfo = new ShippingInfo({ userId });
+
+	await Promise.all([
+		user.save(),
+		cart.save(),
+		profileInfo.save(),
+		shippingInfo.save(),
+	]);
+
+	// TODO: send verification email
+	await sendVerificationEmail(email, "http://localhost:3000/api/register/verify")
+
+	return NextResponse.json({ success: true, message: "user created" });
 }
