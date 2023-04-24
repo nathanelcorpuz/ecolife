@@ -2,7 +2,7 @@ import SearchIcon from "./SearchIcon";
 
 const SearchInput = (inputProps) => {
 	return (
-		<div className="flex w-80 rounded border border-standard-light-300">
+		<div className="flex w-full rounded border border-standard-light-300">
 			<input
 				className="w-full rounded border-none focus:ring-0"
 				type="text"
