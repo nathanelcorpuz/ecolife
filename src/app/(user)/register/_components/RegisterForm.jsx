@@ -26,29 +26,17 @@ export default function RegisterForm() {
 
 	const onPasswordChange = (e) => {
 		setPassword(e.target.value);
-
 		const passwordValidation = validatePassword(
 			e.target.value,
 			confirmPassword
 		);
-
-		if (!passwordValidation.success) {
-			setErrors(passwordValidation.errors);
-		} else {
-			setErrors([]);
-		}
+		setErrors(passwordValidation.errors || []);
 	};
 
 	const onConfirmPasswordChange = (e) => {
 		setConfirmPassword(e.target.value);
-
 		const passwordValidation = validatePassword(password, e.target.value);
-
-		if (!passwordValidation.success) {
-			setErrors(passwordValidation.errors);
-		} else {
-			setErrors([]);
-		}
+		setErrors(passwordValidation.errors || []);
 	};
 
 	if (success) {

@@ -33,7 +33,6 @@ export async function POST(request) {
 		shippingInfo.save(),
 	]);
 
-	// TODO: send verification email
 	await sendVerificationEmail(email, "http://localhost:3000/api/register/verify")
 
 	return NextResponse.json({ success: true, message: "user created" });
