@@ -6,17 +6,22 @@ const userSchema = new Schema({
 	cartId: {
 		type: Schema.Types.ObjectId,
 		ref: "Cart",
-		required: true,
+		required: false, // change to true later
 	},
 	profileInfoId: {
 		type: Schema.Types.ObjectId,
 		ref: "ProfileInfo",
-		required: true,
+		required: false, // change to true later
 	},
 	shippingInfoId: {
 		type: Schema.Types.ObjectId,
 		ref: "ShippingInfo",
+		required: false, // change to true later
+	},
+	email: {
+		type: String,
 		required: true,
+		unique: true,
 	},
 	password: {
 		type: String,
