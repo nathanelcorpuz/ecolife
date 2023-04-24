@@ -1,6 +1,5 @@
 import Button from "@/components/common/buttons/Button";
 import Input from "@/components/common/inputs/Input";
-import Dropdown from "@/components/common/inputs/dropdown/Dropdown";
 import SearchInput from "@/components/common/inputs/search-input/SearchInput";
 import OrderHistoryItem from "./_components/OrderHistoryItem";
 
@@ -35,9 +34,7 @@ export default function Page() {
 						</tbody>
 					</table>
 					<div className="pt-8">
-						<Button>
-							Load more
-						</Button>
+						<Button>Load more</Button>
 					</div>
 				</div>
 			</div>
