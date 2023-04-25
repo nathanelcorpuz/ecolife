@@ -1,3 +1,4 @@
+import "server-only";
 import mongoose from "mongoose";
 
 const NODE_ENV = process.env.NODE_ENV;

@@ -5,6 +5,15 @@ import Logo from "../../Logo";
 import HeaderLink from "./HeaderLink";
 
 const Header = () => {
+	/*
+		This component should detect if the user is authenticated via
+		- registration verification middleware result (if the user has a valid http-only AT and RT in their cookies)
+		- login middleware result (if the user has a valid http-only AT and RT in their cookies)
+
+
+		notes
+		- maybe in root layout?
+	*/
 	return (
 		<header className="flex justify-center gap-48 p-5 items-center bg-accent-light">
 			<div className="w-[30%] flex justify-end">

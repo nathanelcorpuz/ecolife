@@ -1,11 +1,16 @@
+import { NextResponse, NextRequest } from "next/server";
 import User from "@/lib/server/models/User";
 import Cart from "@/lib/server/models/Cart";
-import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
 import connectMongo from "@/lib/server/services/connectMongo";
 import ProfileInfo from "@/lib/server/models/ProfileInfo";
 import ShippingInfo from "@/lib/server/models/ShippingInfo";
-import sendVerificationEmail from "./_utils/sendVerificationEmail";
+import sendVerificationEmail from "@/lib/server/utils/sendVerificationEmail";
+
+/**
+ *
+ * @param {NextRequest} request
+ */
 
 const SALT = +process.env.SALT;
 

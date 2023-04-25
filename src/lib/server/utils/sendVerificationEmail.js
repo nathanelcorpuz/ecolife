@@ -1,14 +1,19 @@
 import { transporter } from "@/lib/server/services/mailer";
+import jwt from "jsonwebtoken";
 
-const email = process.env.MAILER_EMAIL;
+const fromEmail = process.env.MAILER_EMAIL;
+const secret = process.env.REGISTER_TOKEN_SECRET;
+const expiration = +process.env.REGISTER_TOKEN_EXPIRATION_MINUTES * 60;
 
-export default async function sendVerificationEmail(to, verificationLink) {
-	// TODO: update the link to include the token
-	const link = "http://localhost:3000/api/register/verify?token=";
+export default async function sendVerificationEmail(toEmail) {
+	const token = jwt.sign({ email: toEmail }, secret, { expiresIn: expiration });
+
+	const link = `http://localhost:3000/register/verify/${token}`;
+
 	try {
 		const mailOptions = {
-			from: email,
-			to,
+			from: fromEmail,
+			to: toEmail,
 			subject: "Please verify your email",
 			text: `Welcome! Please verify your email by clicking the following link: ${link}`,
 			html: `
