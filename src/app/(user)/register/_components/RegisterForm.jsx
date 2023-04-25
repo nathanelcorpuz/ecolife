@@ -7,9 +7,9 @@ import Link from "next/link";
 import { useState } from "react";
 import validatePassword from "../_helpers/validatePassword";
 import PolicyLinks from "./PolicyLinks";
-import PasswordValidation from "./PasswordValidation";
-import PasswordInput from "./PasswordInput";
 import RegisterSuccess from "./RegisterSuccess";
+import PasswordInput from "@/components/common/password/PasswordInput";
+import PasswordValidation from "@/components/common/password/PasswordValidation";
 
 export default function RegisterForm() {
 	const [email, setEmail] = useState("");
