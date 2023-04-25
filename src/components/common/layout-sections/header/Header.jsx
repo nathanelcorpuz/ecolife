@@ -3,17 +3,17 @@
 import Link from "next/link";
 import Logo from "../../Logo";
 import HeaderLink from "./HeaderLink";
+import { useContext } from "react";
+import { AuthContext } from "@/lib/client/context/AuthContext";
 
 const Header = () => {
-	/*
-		This component should detect if the user is authenticated via
-		- registration verification middleware result (if the user has a valid http-only AT and RT in their cookies)
-		- login middleware result (if the user has a valid http-only AT and RT in their cookies)
+	const { isLoggedIn, setIsLoggedIn } = useContext(AuthContext);
 
+	const onLogout = () => {
+		localStorage.removeItem("isLoggedIn");
+		setIsLoggedIn(false);
+	};
 
-		notes
-		- maybe in root layout?
-	*/
 	return (
 		<header className="flex justify-center gap-48 p-5 items-center bg-accent-light">
 			<div className="w-[30%] flex justify-end">
@@ -35,12 +35,24 @@ const Header = () => {
 					<li>
 						<HeaderLink href="/blog">Blog</HeaderLink>
 					</li>
-					<li>
-						<HeaderLink href="/login">Login</HeaderLink>
-					</li>
-					<li>
-						<HeaderLink href="/register">Register</HeaderLink>
-					</li>
+					{isLoggedIn ? (
+						<>
+							<li>
+								<HeaderLink onClick={onLogout} href="/logout">
+									Logout
+								</HeaderLink>
+							</li>
+						</>
+					) : (
+						<>
+							<li>
+								<HeaderLink href="/login">Login</HeaderLink>
+							</li>
+							<li>
+								<HeaderLink href="/register">Register</HeaderLink>
+							</li>
+						</>
+					)}
 				</ul>
 			</nav>
 			<nav className="w-[30%]">

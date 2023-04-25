@@ -7,6 +7,7 @@ import Footer from "@/components/common/layout-sections/footer/Footer";
 import Header from "@/components/common/layout-sections/header/Header";
 import Newsletter from "@/components/common/layout-sections/Newsletter";
 import Announcement from "@/components/common/layout-sections/Announcement";
+import AuthProvider from "@/lib/client/context/AuthContext";
 
 const lato = Lato({
 	variable: "--font-lato",
@@ -23,12 +24,14 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="en" className={lato.variable}>
 			<body className="bg-standard-light">
-				<Header />
-				<Announcement />
-				{children}
-				<BlogPreview />
-				<Newsletter />
-				<Footer />
+				<AuthProvider>
+					<Header />
+					<Announcement />
+					{children}
+					<BlogPreview />
+					<Newsletter />
+					<Footer />
+				</AuthProvider>
 			</body>
 		</html>
 	);
