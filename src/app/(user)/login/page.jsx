@@ -18,7 +18,6 @@ export default function Page() {
 	const [isLoading, setIsLoading] = useState(false);
 
 	const onLogin = async (e) => {
-		// login logic
 		e.preventDefault();
 		setIsLoading(true);
 

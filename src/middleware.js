@@ -9,7 +9,7 @@ import verifyRegisterToken from "./lib/middleware/verifyRegisterToken";
 export async function middleware(request) {
 	// needed to handle email verification since client side routing is used
 	if (request.nextUrl.pathname.startsWith("/register/verify")) {
-		return verifyRegisterToken(request);
+		// return verifyRegisterToken(request);
 	}
 
 	// handle auth of protected routes
@@ -23,7 +23,7 @@ export async function middleware(request) {
 
 export const config = {
 	matcher: [
-		"/register/verify/:path*",
+		// "/register/verify/:path*",
 		"/cart",
 		"/checkout/:path*",
 		"/profile/:path*",

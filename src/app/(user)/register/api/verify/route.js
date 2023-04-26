@@ -9,14 +9,13 @@ const REGISTRATION_SECRET = process.env.REGISTER_TOKEN_SECRET;
  * @param {NextRequest} request
  */
 
-export async function GET(request) {
-	const { searchParams } = new URL(request.url);
-	const token = searchParams.get("token");
+export async function PUT(request) {
+	const { token } = await request.json();
 
 	try {
 		const { email } = jwt.verify(token, REGISTRATION_SECRET);
 
-		return generateTokenPair(email);
+		return await generateTokenPair(email);
 	} catch (error) {
 		console.log("\n\nerror:");
 		console.log(error);

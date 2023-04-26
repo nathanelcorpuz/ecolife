@@ -7,29 +7,29 @@ import { useContext, useEffect, useState } from "react";
 
 export default function Page({ params }) {
 	const { token } = params;
+	console.log("TOKEN");
+	console.log(token);
 	const { setIsLoggedIn } = useContext(AuthContext);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
 	const [isSuccess, setIsSuccess] = useState(false);
 
 	useEffect(() => {
-		// handle verification request here
-		// set httpOnly token through this process
 		const verifyRegistrationToken = async () => {
 			const response = await fetch("/register/api/verify", {
 				method: "PUT",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: {
-					token,
-				},
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ token }),
+				cache: "no-store",
 			});
 
 			const data = await response.json();
 
+			const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+			await sleep(2000);
+
 			if (data.success) {
-				// http only cookies are set
 				localStorage.setItem("isLoggedIn", true);
 				setIsLoggedIn(true);
 				setIsSuccess(true);
@@ -38,7 +38,9 @@ export default function Page({ params }) {
 			}
 			setIsLoading(false);
 		};
-	}, [setIsLoggedIn]);
+
+		verifyRegistrationToken();
+	}, []);
 
 	return (
 		<main className="flex flex-col items-center py-24">
