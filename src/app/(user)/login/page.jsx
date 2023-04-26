@@ -28,6 +28,7 @@ export default function Page() {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify({ email, password }),
+			cache: "no-store",
 		});
 
 		const data = await response.json();
