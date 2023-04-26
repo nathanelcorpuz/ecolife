@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Logo from "../../Logo";
 import HeaderLink from "./HeaderLink";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "@/lib/client/context/AuthContext";
 
 const Header = () => {
@@ -13,6 +13,10 @@ const Header = () => {
 		localStorage.removeItem("isLoggedIn");
 		setIsLoggedIn(false);
 	};
+
+	useEffect(() => {
+		localStorage.getItem("isLoggedIn") && setIsLoggedIn(true);
+	}, []);
 
 	return (
 		<header className="flex justify-center gap-48 p-5 items-center bg-accent-light">
@@ -37,6 +41,9 @@ const Header = () => {
 					</li>
 					{isLoggedIn ? (
 						<>
+							<li>
+								<HeaderLink href="/profile">Profile</HeaderLink>
+							</li>
 							<li>
 								<HeaderLink onClick={onLogout} href="/logout">
 									Logout

@@ -7,8 +7,6 @@ import { useContext, useEffect, useState } from "react";
 
 export default function Page({ params }) {
 	const { token } = params;
-	console.log("TOKEN");
-	console.log(token);
 	const { setIsLoggedIn } = useContext(AuthContext);
 	const [isLoading, setIsLoading] = useState(true);
 	const [isError, setIsError] = useState(false);
@@ -16,7 +14,7 @@ export default function Page({ params }) {
 
 	useEffect(() => {
 		const verifyRegistrationToken = async () => {
-			const response = await fetch("/register/api/verify", {
+			const response = await fetch("/api/verify-registration", {
 				method: "PUT",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ token }),

@@ -7,7 +7,7 @@ import PasswordInput from "@/components/common/password/PasswordInput";
 import { AuthContext } from "@/lib/client/context/AuthContext";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 export default function Page() {
 	const router = useRouter();
@@ -21,7 +21,7 @@ export default function Page() {
 		e.preventDefault();
 		setIsLoading(true);
 
-		const response = await fetch("/login/api", {
+		const response = await fetch("/api/login", {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -40,6 +40,10 @@ export default function Page() {
 			alert(data.message);
 		}
 	};
+
+	useEffect(() => {
+		setIsLoggedIn(false);
+	}, []);
 
 	const onEmailChange = (e) => setEmail(e.target.value);
 	const onPasswordChange = (e) => setPassword(e.target.value);
