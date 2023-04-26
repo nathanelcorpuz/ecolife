@@ -14,7 +14,8 @@ export default function Page({ params }) {
 
 	useEffect(() => {
 		const verifyRegistrationToken = async () => {
-			const response = await fetch("/api/verify-registration", {
+			// http-only cookies set by server on success
+			const response = await fetch("/api/auth/verify-registration", {
 				method: "PUT",
 				headers: { "Content-Type": "application/json" },
 				body: JSON.stringify({ token }),

@@ -1,5 +1,6 @@
-import { NextRequest } from "next/server";
-import useRefreshToken from "./lib/server/utils/useRefreshToken";
+import { NextRequest, NextResponse } from "next/server";
+
+// try again tomorrow
 
 /**
  *
@@ -7,7 +8,8 @@ import useRefreshToken from "./lib/server/utils/useRefreshToken";
  */
 
 export async function middleware(request) {
-	return await useRefreshToken(request);
+	console.log("\n\n middleware runs \n\n");
+	return NextResponse.next();
 }
 
 export const config = {

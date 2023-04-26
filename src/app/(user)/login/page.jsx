@@ -21,24 +21,24 @@ export default function Page() {
 		e.preventDefault();
 		setIsLoading(true);
 
-		const response = await fetch("/api/login", {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify({ email, password }),
-			cache: "no-store",
-		});
+		// const response = await fetch("/api/auth/login", {
+		// 	method: "POST",
+		// 	headers: {
+		// 		"Content-Type": "application/json",
+		// 	},
+		// 	body: JSON.stringify({ email, password }),
+		// 	cache: "no-store",
+		// });
 
-		const data = await response.json();
+		// const data = await response.json();
 
-		if (data.success) {
-			localStorage.setItem("isLoggedIn", true);
-			setIsLoggedIn(true);
-			router.push("/");
-		} else {
-			alert(data.message);
-		}
+		// if (data.success) {
+		// 	localStorage.setItem("isLoggedIn", true);
+		// 	setIsLoggedIn(true);
+		// 	router.push("/");
+		// } else {
+		// 	alert(data.message);
+		// }
 	};
 
 	useEffect(() => {

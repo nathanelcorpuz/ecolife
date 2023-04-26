@@ -49,7 +49,7 @@ export default function RegisterForm() {
 			onSubmit={async (e) => {
 				e.preventDefault();
 				setLoading(true);
-				const res = await fetch("/api/register", {
+				const res = await fetch("/api/auth/register", {
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",

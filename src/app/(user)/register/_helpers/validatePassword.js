@@ -17,12 +17,10 @@ export default function validatePassword(password, confirmPassword) {
 
 	if (password !== confirmPassword && !isEmpty) {
 		errors.push("mismatch");
-		console.log("gets pushed");
 	}
 
 	if (password === confirmPassword && errors.includes("mismatch")) {
 		errors.splice(errors.indexOf("mismatch"), 1);
-		console.log("gets spliced");
 	}
 
 	if (errors.length === 0) {
